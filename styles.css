@@ -11,7 +11,14 @@ body{
     background-color: var(--prpl);
 }
 
-.svg--main > g > path {
+.svg--main{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.svg--main > g > g > path {
     fill: var(--lt-blu);
     stroke-linejoin: round;
+    transform: scale(.5)
 }
