@@ -1,0 +1,17 @@
+:root {
+    --prpl: #6f00ff;
+    --lt-grn: #358f6e;
+    --drk-grn: #264c3a;
+    --gld: #ab9d68;
+    --orng: #ed5a2e;
+    --lt-blu: #afcfde;
+}
+
+body{
+    background-color: var(--prpl);
+}
+
+.svg--main > g > path {
+    fill: var(--lt-blu);
+    stroke-linejoin: round;
+}
