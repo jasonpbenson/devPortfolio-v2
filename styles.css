@@ -5,20 +5,74 @@
     --gld: #ab9d68;
     --orng: #ed5a2e;
     --lt-blu: #afcfde;
+    --header-font: 'Amaranth', sans-serif;
 }
 
 body{
-    background-color: var(--prpl);
+    background-image: linear-gradient(var(--prpl) 50%, var(--lt-grn));
+    margin: 0;
+    width: 100vw;
 }
 
-.svg--main{
-    margin: 0 auto;
+.container--all{
     display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.container--content{
+    width: 100%;
+}
+
+.header{
+    color: var(--lt-blu);
+    display: flex;
+    font-family: var(--header-font);
     justify-content: center;
 }
 
-.svg--main > g > g > path {
-    fill: var(--lt-blu);
-    stroke-linejoin: round;
-    transform: scale(.5)
+.header:active{
+    text-shadow: 0px 1px 2px var(--drk-grn);
 }
+
+.menu{
+    color: var(--lt-blu);
+    display: flex;
+    flex-direction: row;
+    font-family: var(--header-font);
+    justify-content: space-around;
+}
+
+.menu > h2{
+    border-radius: 15px;
+    border: 1px solid var(--lt-grn);
+    padding: 5px;
+    text-align: center;
+    width: 92px;
+}
+
+.menu > h2:active{
+    border: 1px solid var(--lt-blu);
+    box-shadow: 0px 1px 2px var(--drk-grn);
+}
+
+.selector:active{
+    color: var(--lt-grn);
+} 
+
+.container--svg{
+    display: flex;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.flower--petals{
+    fill: var(--gld);
+}
+
+.flower--centers{
+    fill: var(--orng);
+}
+
+
+
