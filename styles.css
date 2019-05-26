@@ -6,11 +6,14 @@
     --orng: #ed5a2e;
     --lt-blu: #afcfde;
     --header-font: 'Amaranth', sans-serif;
+    --paragraph-font: 'Overlock', cursive;
 }
 
 body{
-    background-image: linear-gradient(var(--prpl) 50%, var(--lt-grn));
+    background-image: linear-gradient(var(--prpl) 65%, var(--lt-grn));
+    height: 100vh;
     margin: 0;
+    overflow: hidden;
     width: 100vw;
 }
 
@@ -18,6 +21,7 @@ body{
     display: flex;
     flex-direction: column;
     width: 100%;
+    justify-content: center;
 }
 
 .container--content{
@@ -27,32 +31,48 @@ body{
 .header{
     color: var(--lt-blu);
     display: flex;
+    flex-direction: column;
     font-family: var(--header-font);
     justify-content: center;
+    margin-top: 1.5rem;
 }
 
-.header:active{
+.header > h2, 
+.header > p{
+    text-align: center;
+    margin: 0;
+}
+
+.header > p{
+    color: var(--lt-grn);
+    font-family: var(--paragraph-font);
+    margin-top: .5rem;
+    font-size: 20px;
+}
+
+.header > h2:active{
     text-shadow: 0px 1px 2px var(--drk-grn);
 }
 
-.menu{
+.container--menu{
     color: var(--lt-blu);
     display: flex;
     flex-direction: row;
     font-family: var(--header-font);
+    height: fit-content;
     justify-content: space-around;
 }
 
-.menu > h2{
+.container--menu > h2{
     border-radius: 15px;
-    border: 1px solid var(--lt-grn);
+    border: 1px solid var(--drk-grn);
     padding: 5px;
     text-align: center;
     width: 92px;
 }
 
-.menu > h2:active{
-    border: 1px solid var(--lt-blu);
+.container--menu > h2:active{
+    border: 1px solid var(--prpl);
     box-shadow: 0px 1px 2px var(--drk-grn);
 }
 
@@ -60,9 +80,10 @@ body{
     color: var(--lt-grn);
 } 
 
+/* svg styles=============================================================================== */
 .container--svg{
     display: flex;
-    margin-top: 1rem;
+    overflow: visible;
     width: 100%;
 }
 
@@ -74,5 +95,142 @@ body{
     fill: var(--orng);
 }
 
+/* modal=================================================================================== */
 
+.modal::-webkit-scrollbar{
+    background: none;
+    opacity: 0;
+    outline: none;
+    transition: all .5sec;
+    width: 2px;
+}
+
+.modal::-webkit-scrollbar:active{
+    opacity: 1;
+}
+
+.modal::-webkit-scrollbar-thumb{
+    background-color: var(--orng);
+}
+
+.modal::-webkit-scrollbar-corner{
+    display: none;
+}
+
+.modal{
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 200;
+    top: 108px;
+    left: 20px;
+    width: 90vw;
+    height: 52.5vh;
+    padding: 25px 20px 0px 20px;
+    text-align: center;
+    overflow-x: scroll;
+    overflow-y: visible;
+    scroll-behavior: smooth;
+    transition: all 1s;
+}
+
+.displayNone{
+    display: none;
+}
+
+/* 'about' modal============================================================================ */
+
+.aboutImage{
+    fill: var(--prpl);
+    width: 23%;
+}
+
+.aboutHeader p{
+    color: var(--prpl);
+    font-family: var(--paragraph-font);
+    font-size: 20px;
+}
+
+.aboutTechContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.aboutTechContainer h2{
+    margin: .5rem auto;
+    display: block;
+    font-size: 24px;
+    color: var(--lt-blu);
+    font-family: var(--header-font);
+}
+
+.aboutTechContainer h3{
+    margin: .5rem auto;
+    display: block;
+    font-size: 24px;
+    color: var(--prpl);
+    font-family: var(--header-font);
+}
+
+.aboutTechContainer i{
+    font-size: 32px;
+    margin: 1rem;
+}
+
+.aboutTechContainer p{
+    font-family: var(--paragraph-font);
+    font-size: 18px;
+}
+
+.techIcon{
+    color: var(--prpl);
+    margin: 5px;
+    width: auto;
+}
+
+.frontEnd{
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--prpl);
+    width: 80%;
+    margin: 0 auto;
+}
+
+.backEnd{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: baseline;
+    color: #90ff00;
+    margin: 0 auto;
+}
+
+.serverDb{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    margin: 0 auto;
+    color: #90ff00;
+}
+
+.etAl{
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #90ff00;
+    width: 80%;
+    margin: 0 auto;
+}
 
