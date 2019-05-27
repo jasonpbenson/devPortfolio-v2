@@ -17,6 +17,25 @@ body{
     width: 100vw;
 }
 
+/* overwrite default behavior=============================================================== */
+
+a {
+    text-decoration: none;
+    color: inherit;
+    width: 4rem;
+    display: block;
+}
+
+button:focus {
+    outline:none;
+    outline-style: none;
+    box-shadow: none;
+    }
+
+button:active {
+    outline:none;
+}
+
 .container--all{
     display: flex;
     flex-direction: column;
@@ -99,18 +118,6 @@ body{
 
 .modal::-webkit-scrollbar{
     background: none;
-    opacity: 0;
-    outline: none;
-    transition: all .5sec;
-    width: 2px;
-}
-
-.modal::-webkit-scrollbar:active{
-    opacity: 1;
-}
-
-.modal::-webkit-scrollbar-thumb{
-    background-color: var(--orng);
 }
 
 .modal::-webkit-scrollbar-corner{
@@ -119,18 +126,18 @@ body{
 
 .modal{
     box-sizing: border-box;
-    position: fixed;
-    z-index: 200;
-    top: 108px;
-    left: 20px;
-    width: 90vw;
     height: 52.5vh;
-    padding: 25px 20px 0px 20px;
-    text-align: center;
+    left: 28px;
     overflow-x: scroll;
     overflow-y: visible;
+    padding: 25px 20px 40px 20px;
+    position: fixed;
     scroll-behavior: smooth;
+    text-align: center;
+    top: 108px;
     transition: all 1s;
+    width: 90vw;
+    z-index: 200;
 }
 
 .displayNone{
@@ -140,7 +147,6 @@ body{
 /* 'about' modal============================================================================ */
 
 .aboutImage{
-    fill: var(--prpl);
     width: 23%;
 }
 
@@ -154,30 +160,23 @@ body{
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-content: center;
     justify-content: center;
     text-align: center;
 }
 
-.aboutTechContainer h2{
-    margin: .5rem auto;
-    display: block;
-    font-size: 24px;
-    color: var(--lt-blu);
-    font-family: var(--header-font);
-}
-
 .aboutTechContainer h3{
-    margin: .5rem auto;
-    display: block;
-    font-size: 24px;
     color: var(--prpl);
+    display: block;
     font-family: var(--header-font);
+    font-size: 24px;
+    margin: 1rem auto;
+    padding: .5rem;
+    width: 10rem;
 }
 
 .aboutTechContainer i{
     font-size: 32px;
-    margin: 1rem;
+    margin: .5rem;
 }
 
 .aboutTechContainer p{
@@ -188,14 +187,13 @@ body{
 .techIcon{
     color: var(--prpl);
     margin: 5px;
-    width: auto;
+    width: 70px;
 }
 
 .frontEnd{
     display: flex;
     flex-direction: row;
     flex-flow: wrap;
-    align-content: center;
     justify-content: center;
     text-align: center;
     color: var(--prpl);
@@ -206,8 +204,7 @@ body{
 .backEnd{
     display: flex;
     flex-direction: row;
-    align-content: center;
-    justify-content: baseline;
+    justify-content: center;
     color: #90ff00;
     margin: 0 auto;
 }
@@ -215,22 +212,119 @@ body{
 .serverDb{
     display: flex;
     flex-direction: row;
-    align-content: center;
+    flex-wrap: wrap;
     justify-content: center;
     margin: 0 auto;
-    color: #90ff00;
 }
 
 .etAl{
     display: flex;
     flex-direction: row;
     flex-flow: wrap;
-    align-content: center;
-    align-items: center;
     justify-content: center;
     text-align: center;
     color: #90ff00;
     width: 80%;
     margin: 0 auto;
+}
+
+/* 'projects' modal ======================================================================== */
+.projectsImage{
+    width: 23%;
+}
+
+.elgContainer{
+    border-bottom: solid 2px var(--prpl);
+    padding: 1rem;
+}
+
+.elgLogo{
+    padding: .75rem;
+    width: 70%;
+}
+
+.elgCap{
+    width: 90%;
+    padding: .75rem;
+}
+
+.emOceansContainer{
+    border-bottom: solid 2px var(--prpl);;
+    padding: 1rem;
+}
+
+.emOceansLogo{
+    padding: .75rem;
+    width: 55%;
+}
+
+.emOceansCap{
+    width: 90%;
+    padding: .75rem;
+
+}
+
+.pithosContainer{
+    padding: 1rem;
+}
+
+.pithosLogo{
+    padding: .75rem;
+    width: 35%;
+}
+
+.pithosCap{
+    width: 90%;
+    padding: .75rem;
+}
+
+.projectLinks{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.projectLinks a{
+    border: 1px solid var(--prpl);
+    border-radius: 15px;
+    color: var(--prpl);
+    font-family: var(--header-font);
+    font-size: 24px;
+}
+
+.elgProjectLinks{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.elgProjectLinks a{
+    font-size: 24px;
+    color: var(--prpl);;
+    font-family: var(--header-font);
+    border: 1px solid var(--prpl);
+    border-radius: 15px;
+    margin-bottom: 5px;
+}
+
+.elgProjectLinks h2{
+    font-size: 18px;
+    color: var(--prpl);;
+    font-family: var(--header-font);
+    margin: 0;
+}
+
+.projectsContainer h3{
+    font-size: 24px;
+    color: var(--prpl);;
+    font-family: var(--header-font);
+    margin: 16px auto 12px auto;
+}
+
+.projectsContainer p{
+    font-size: 18px;
+    color: var(--prpl);;
+    font-family: var(--paragraph-font);
 }
 
