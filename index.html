@@ -4,16 +4,22 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Amaranth|Overlock&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/mainStyles.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/modalStyles.css" />
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <script src="node_modules/animejs/lib/anime.min.js"></script>
 
   </head>
   <body>
 
-    <div class="container--all">
+    <div class="container--all" id="container--all">
 
-      <div class="modal" id="modal"></div>
+      <div class="modal displayNone" id="contentModal"></div>
+
+      <!-- modals for dev js============================================================== -->
+      <!-- <div class="about--modal modal displayNone" id="about--modal"></div>
+      <div class="projects--modal modal displayNone" id="projects--modal"></div>
+      <div class="contact--modal modal displayNone" id="contact--modal"></div> -->
 
       <header class="selector header" id="header">
         <h2>jason paul benson</h2>
@@ -21,7 +27,7 @@
       </header>
 
       <section class="container--svg">
-        <svg version="1.1" id="main--svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        <svg version="1.1" class="main--svg" id="main--svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
           width="508.706px" height="508.706px" viewBox="0 -8.706 508.706 508.706" enable-background="new 0 -8.706 508.706 508.706"
           xml:space="preserve">
           <path class="flower--petals flower--petals1" id="flower--petals1" d="M277.401,417.6c-2,0-7.376,0.826-12.171,2.156c4.331-2.453,8.713-5.662,10.125-7.08
@@ -96,6 +102,9 @@
     </div> 
 
     <script src="js/animations.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/aboutData.js"></script>
+    <script src="js/contactData.js"></script>
+    <script src="js/projectData.js"></script>
+    <script src="js/contentModal.js"></script>
   </body>
 </html>

@@ -1,0 +1,237 @@
+.modal::-webkit-scrollbar{
+    background: none;
+}
+
+.modal::-webkit-scrollbar-corner{
+    display: none;
+}
+
+.modal{
+    /* box-sizing: content-box; */
+    height: 39vh;
+    /* left: 28px; */
+    opacity: 1;
+    overflow-y: scroll;
+    padding: 25px 20px 50px 20px;
+    position: fixed;
+    scroll-behavior: smooth;
+    text-align: center;
+    top: 108px;
+    width: 90vw;
+    z-index: 200;
+    -webkit-animation: fadeIn 3s; 
+    animation: fadeIn 3s;
+}
+
+@keyframes fadeIn{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+#displayNone{
+    display: none;
+}
+
+.displayNone{
+    display: none;
+}
+
+@media screen and (min-width: 300px) and (max-width: 374px){
+    .modal{
+        height: 41vh;
+    }
+}
+
+/* applies to icon at head of each section */
+.contentIcon{
+    margin: 0  auto 1rem auto;
+    width: 23%;
+}
+
+/* 'about' modal============================================================================ */
+
+.aboutContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: center;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    width: 90vw;
+}
+
+.briefStatement{
+    color: var(--prpl);
+    font-family: var(--paragraph-font);
+    font-size: 20px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.aboutTechContainer{
+    color: var(--prpl);
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: center;
+    text-align: center;
+    width: 90vw;
+}
+
+.aboutTechContainer h3{
+    color: var(--prpl);
+    display: block;
+    font-family: var(--header-font);
+    font-size: 24px;
+    margin: 1rem auto;
+    padding: .5rem;
+    width: inherit;
+}
+
+.techIcon{
+    color: var(--prpl);
+    font-size: 32px;
+    margin: .8rem;
+    width: 50px;
+}
+
+.section{
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: center;
+    text-align: center;
+    color: var(--prpl);
+    width: inherit;
+}
+
+/* 'projects' modal ======================================================================== */
+.projectsContainerAll{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 2.9%;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+}
+
+.projectsContainerAll h3{
+    color: var(--prpl);
+    font-family: var(--header-font);
+    font-size: 24px;
+    margin: 16px auto 12px auto;
+    text-align: center;
+}
+
+.projectsContainerAll p{
+    font-size: 18px;
+    color: var(--prpl);;
+    font-family: var(--paragraph-font);
+}
+
+.projectContainerEach{
+    border-top: 1px dashed var(--prpl);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* margin: 1rem auto; */
+    padding: 1.5rem;
+}
+
+.projectLogo{
+    max-height: 100px;
+    margin-bottom: 1rem;
+}
+
+.projectLinks{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    max-height: 41px;
+}
+
+.projectLinks a{
+    border: 1px solid var(--prpl);
+    border-radius: 15px;
+    color: var(--prpl);
+    font-family: var(--header-font);
+    font-size: 24px;
+    padding: 5px;
+}
+
+.projectLinks p{
+    font-family: var(--paragraph-font);
+    font-size: 18px;
+}
+
+.projectScreenCap{
+    width: 90%;
+    padding: .75rem;
+}
+
+@media screen and (min-width: 300px) and (max-width: 374px){
+    .modal{
+        height: 41vh;
+    }
+}
+
+.projectDescription{
+    padding: .8rem;
+}
+
+.projectTech{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-weight: bolder;
+    justify-content: center;
+    margin: 5px;
+}
+
+/* 'contact' modal====================================================== */
+
+.contactContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 2.9%;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+}
+
+.linkContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 1.5rem auto;
+}
+
+.linkContainer a{
+    border: 1px solid var(--prpl);
+    border-radius: 15px;
+    font-family: var(--header-font);
+    font-size: 22px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.contactContainer p{
+    color: var(--prpl);
+    font-family: var(--paragraph-font);
+    font-size: 22px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+@media screen and (min-width: 300px) and (max-width: 374px){
+    .contact--modal{
+        left: 2%;
+    }
+    .contactLinks{
+        padding: 1rem 0;
+    }
+}
