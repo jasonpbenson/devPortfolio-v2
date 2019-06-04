@@ -41,17 +41,24 @@ const showAboutContent = (data)=>{
     //loop through 'aboutData' and pull section titles and tech icons
     data.forEach(element => {
         //section headers
-        let section = document.createElement('h3');
-        let sectionHeader = document.createTextNode(element.sectionTitle);
+        let section = document.createElement("div");
+        section.classList.add("section");
+        let sectionHeader = document.createElement("h3");
+        let sectionHeaderText = document.createTextNode(element.sectionTitle);
         section.appendChild(sectionHeader);
+        sectionHeader.appendChild(sectionHeaderText);
         techContainer.appendChild(section);
+
+        let iconContainer = document.createElement("div");
+        iconContainer.classList.add("iconContainer")
+        section.appendChild(iconContainer);
 
         //icons
         for(let i = 0; i < element.icons.length; i++){
             let techIcon = document.createElement("i");
             techIcon.setAttribute("class", element.icons[i]);
             techIcon.classList.add("techIcon");
-            techContainer.appendChild(techIcon);
+            iconContainer.appendChild(techIcon);
         }
     });
 };
@@ -60,24 +67,35 @@ showAboutContent(techSections);
 
 //add click listener to 'about' button
 aboutSelector.addEventListener('click', (e)=>{
-    //reset conentModal so that the transition between conent sets is smooth
-    contentModal.classList.add("displayNone");
-    //hide projects and contact content
-    projectsContent.setAttribute("id", "displayNone");
-    contactContent.setAttribute("id", "displayNone");
-    //display modal and about content
-    setTimeout(function(){
-        contentModal.classList.remove("displayNone");
-    }, 500);
-    aboutContent.removeAttribute("id", "displayNone");
+    //check to see if already displayed on page
+    //if so: do nothing
+    if(aboutContent.getAttribute("id") != "displayNone"){
+        return
+    }else{
+        //if not:
+        //reset conentModal so that the transition between conent sets is smooth
+        contentModal.classList.add("displayNone");
+        contentModal.scrollTop = 0;
+        //hide projects and contact content
+        projectsContent.setAttribute("id", "displayNone");
+        contactContent.setAttribute("id", "displayNone");
+        //display modal and about content
+        setTimeout(function(){
+            contentModal.classList.remove("displayNone");
+        }, 500);
+        aboutContent.scrollTop = 0;
+        aboutContent.removeAttribute("id", "displayNone");
+    }
 });
 
 //create projectsContent child elements and populate with data
 const showProjectsContent = function(data){
+    //create icon
     let projectsIcon = document.createElement("img");
     projectsIcon.setAttribute('src', "assets/svg/projects.svg");
     projectsIcon.classList.add("contentIcon");
     projectsContent.appendChild(projectsIcon);
+
     data.forEach(element => {
         //create container for each project
         let projectContainerEach = document.createElement("div");
@@ -152,16 +170,25 @@ const showProjectsContent = function(data){
 showProjectsContent(projects);
 
 projectSelector.addEventListener('click', (e)=>{
-    //reset conentModal so that the transition between conent sets is smooth
-    contentModal.classList.add("displayNone");
-    //hide projects and contact content
-    aboutContent.setAttribute("id", "displayNone");
-    contactContent.setAttribute("id", "displayNone");
-    //display modal and projects content
-    setTimeout(function(){
-        contentModal.classList.remove("displayNone");
-    }, 500);
-    projectsContent.removeAttribute("id", "displayNone");
+    //check to see if already displayed on page
+    //if so: do nothing
+    if(projectsContent.getAttribute("id") != "displayNone"){
+        return
+    }else{
+        //if not:
+        //reset conentModal so that the transition between conent sets is smooth
+        contentModal.classList.add("displayNone");
+        contentModal.scrollTop = 0;
+        //hide projects and contact content
+        aboutContent.setAttribute("id", "displayNone");
+        contactContent.setAttribute("id", "displayNone");
+        //display modal and projects content
+        setTimeout(function(){
+            contentModal.classList.remove("displayNone");
+        }, 500);
+        projectsContent.scrollTop = 0;
+        projectsContent.removeAttribute("id", "displayNone");
+    }
 });
 
 //create contactContent child elements and populate with data
@@ -178,6 +205,7 @@ const showContactConent = function(data){
         let linkContainer = document.createElement("div");
         linkContainer.classList.add("linkContainer")
         contactContent.appendChild(linkContainer);
+
         for(let i = 0; i < element.links.length; i++){
 
             //create a tags and set href
@@ -192,6 +220,12 @@ const showContactConent = function(data){
             linkLabel.appendChild(labelText);
             contactLink.appendChild(linkLabel);
         };
+        for(let i = 0; i < element.info.length; i++){
+            let infoText = document.createElement("p");
+            let infoTextContent = document.createTextNode(element.info[i]);
+            infoText.appendChild(infoTextContent);
+            contactContent.appendChild(infoText);
+        }
     });
 
 }
@@ -199,16 +233,25 @@ const showContactConent = function(data){
 showContactConent(contactInfo);
 
 contactSelector.addEventListener('click', (e)=>{
-    //reset conentModal so that the transition between conent sets is smooth
-    contentModal.classList.add("displayNone");
-    //hide projects and contact content
-    aboutContent.setAttribute("id", "displayNone");
-    projectsContent.setAttribute("id", "displayNone");
-    //display modal and projects content
-    setTimeout(function(){
-        contentModal.classList.remove("displayNone");
-    }, 500);
-    contactContent.removeAttribute("id", "displayNone");
+     //check to see if already displayed on page
+    //if so: do nothing
+    if(contactContent.getAttribute("id") != "displayNone"){
+        return
+    }else{
+        //if not:
+        //reset conentModal so that the transition between conent sets is smooth
+        contentModal.classList.add("displayNone");
+        contentModal.scrollTop = 0;
+        //hide projects and contact content
+        aboutContent.setAttribute("id", "displayNone");
+        projectsContent.setAttribute("id", "displayNone");
+        //display modal and projects content
+        setTimeout(function(){
+            contentModal.classList.remove("displayNone");
+        }, 500);
+        contactContent.scrollTop = 0;
+        contactContent.removeAttribute("id", "displayNone");
+    }
 });
 
 //reset modal
@@ -216,7 +259,12 @@ contactSelector.addEventListener('click', (e)=>{
 resetButton.addEventListener('click', (e)=>{
     //hide all 
     contentModal.classList.add("displayNone")
-    aboutContent.setAttribute("id", "displayNone")
-    projectsContent.setAttribute("id", "displayNone")
-    contactContent.setAttribute("id", "displayNone")
+    contentModal.scrollTop = 0;
+    aboutContent.setAttribute("id", "displayNone");
+    aboutContent.scrollTop = 0;
+    projectsContent.scrollTop = 0;
+    console.log(projectsContent.scrollTop);
+    projectsContent.setAttribute("id", "displayNone");
+    contactContent.setAttribute("id", "displayNone");
+    contactContent.scrollTop = 0;
 });
