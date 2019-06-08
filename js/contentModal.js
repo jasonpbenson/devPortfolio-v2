@@ -75,17 +75,29 @@ aboutSelector.addEventListener('click', (e)=>{
         //if not:
         //reset conentModal so that the transition between conent sets is smooth
         contentModal.classList.add("displayNone");
-        contentModal.scrollTop = 0;
         //hide projects and contact content
         projectsContent.setAttribute("id", "displayNone");
         contactContent.setAttribute("id", "displayNone");
         //display modal and about content
         setTimeout(function(){
             contentModal.classList.remove("displayNone");
-        }, 500);
-        aboutContent.scrollTop = 0;
-        aboutContent.removeAttribute("id", "displayNone");
+        }, 1800);
+        setTimeout(function(){
+            aboutContent.removeAttribute("id", "displayNone");
+        }, 1800);
+
+        const aboutTetherInstance = new Tether({
+            element: contentModal,
+            target: flowerCenter1,
+            attachment: 'middle center',
+            targetAttachment: 'middle center'
+        });
+        
+        setTimeout(function(){
+            aboutTetherInstance.position();
+        }, 1800)
     }
+
 });
 
 //create projectsContent child elements and populate with data
@@ -129,25 +141,17 @@ const showProjectsContent = function(data){
             let demoText = document.createTextNode("demo");
             demoLink.appendChild(demoText);
             projectLinks.appendChild(demoLink);
-        }else{
-            let demoLink = document.createElement("p");
-            let placeHolderText = document.createTextNode("[demo soon]");
-            demoLink.appendChild(placeHolderText);
-            projectLinks.appendChild(demoLink);
         };
 
         //project preview image 
         //desktop only or until i think of a better solution 
         //than clip path to maintain the illusion of content
         //being inside circle...
-        if(window.screen.width >= 900){
-            let projectPreview = document.createElement("img");
-            projectPreview.classList.add("projectScreenCap");
-            projectPreview.setAttribute("src", element.screenCap);
-            projectContainerEach.appendChild(projectPreview);
-        }else{
-            let projectPreview = null;
-        };
+        let projectPreview = document.createElement("img");
+        projectPreview.classList.add("projectScreenCap");
+        projectPreview.setAttribute("src", element.screenCap);
+        projectPreview.classList.add("displayNone");
+        projectContainerEach.appendChild(projectPreview);
 
         //project desctiption
         let projectDescription = document.createElement("p");
@@ -178,16 +182,27 @@ projectSelector.addEventListener('click', (e)=>{
         //if not:
         //reset conentModal so that the transition between conent sets is smooth
         contentModal.classList.add("displayNone");
-        contentModal.scrollTop = 0;
         //hide projects and contact content
         aboutContent.setAttribute("id", "displayNone");
         contactContent.setAttribute("id", "displayNone");
         //display modal and projects content
         setTimeout(function(){
             contentModal.classList.remove("displayNone");
-        }, 500);
-        projectsContent.scrollTop = 0;
-        projectsContent.removeAttribute("id", "displayNone");
+        }, 1800);
+        setTimeout(function(){
+            projectsContent.removeAttribute("id", "displayNone");
+        }, 1800)
+        
+        const projectsTetherInstance = new Tether({
+            element: contentModal,
+            target: flowerCenter2,
+            attachment: 'middle center',
+            targetAttachment: 'middle center'
+        });
+        
+        setTimeout(function(){
+            projectsTetherInstance.position();
+        }, 1800)
     }
 });
 
@@ -215,10 +230,8 @@ const showContactConent = function(data){
             linkContainer.appendChild(contactLink)
 
             //label a tags
-            let linkLabel = document.createElement("p");
             let labelText = document.createTextNode(element.titles[i]);
-            linkLabel.appendChild(labelText);
-            contactLink.appendChild(linkLabel);
+            contactLink.appendChild(labelText);
         };
         for(let i = 0; i < element.info.length; i++){
             let infoText = document.createElement("p");
@@ -241,16 +254,27 @@ contactSelector.addEventListener('click', (e)=>{
         //if not:
         //reset conentModal so that the transition between conent sets is smooth
         contentModal.classList.add("displayNone");
-        contentModal.scrollTop = 0;
         //hide projects and contact content
         aboutContent.setAttribute("id", "displayNone");
         projectsContent.setAttribute("id", "displayNone");
         //display modal and projects content
         setTimeout(function(){
             contentModal.classList.remove("displayNone");
-        }, 500);
-        contactContent.scrollTop = 0;
-        contactContent.removeAttribute("id", "displayNone");
+        }, 1800);
+        setTimeout(function(){
+            contactContent.removeAttribute("id", "displayNone");
+        }, 1800)
+        
+        const contactTetherInstance = new Tether({
+            element: contentModal,
+            target: flowerCenter3,
+            attachment: 'middle center',
+            targetAttachment: 'middle center'
+        });
+        
+        setTimeout(function(){
+            contactTetherInstance.position();
+        }, 1800)
     }
 });
 
@@ -259,12 +283,7 @@ contactSelector.addEventListener('click', (e)=>{
 resetButton.addEventListener('click', (e)=>{
     //hide all 
     contentModal.classList.add("displayNone")
-    contentModal.scrollTop = 0;
     aboutContent.setAttribute("id", "displayNone");
-    aboutContent.scrollTop = 0;
-    projectsContent.scrollTop = 0;
-    console.log(projectsContent.scrollTop);
     projectsContent.setAttribute("id", "displayNone");
     contactContent.setAttribute("id", "displayNone");
-    contactContent.scrollTop = 0;
 });

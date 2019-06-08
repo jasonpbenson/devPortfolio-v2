@@ -1,0 +1,52 @@
+
+/* queries for mainStyles======================================== */
+
+@media all and (max-width: 320px){
+    .container--svg{
+        top: -3rem;
+        transform: scale(.8);
+    }
+}
+
+@media all and (min-width: 980px){
+    .header{
+        justify-content: flex-start;
+        margin-left: 8%;
+        margin-top: 4%;
+        width: 25%;
+    }
+
+    .container--menu{
+        bottom: 20%;
+        flex-direction: column;
+        justify-content: center;
+        left: 8%;
+        width: 25%;
+    }
+
+    .container--menu > h2{
+        margin: 5px auto;
+    }
+
+    .container--svg{
+        justify-content: flex-end;
+        margin-right: 25%;
+        transform: scale(1.4);
+    }
+}
+
+/* queries for modalStyles======================================= */
+@media all and (max-width: 320px){
+    .modal{
+        height: 230px;
+        padding: 40px 15px;
+    }
+}
+
+@media all and (min-width: 980px){
+    .modal{
+        height: 450px;
+        padding: 120px 10px;
+        width: 380px;
+    }
+}

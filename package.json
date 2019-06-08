@@ -2,6 +2,7 @@
   "requires": true,
   "lockfileVersion": 1,
   "dependencies": {
-    "animejs": "^3.0.1"
+    "animejs": "^3.0.1",
+    "tether": "^1.4.6"
   }
 }

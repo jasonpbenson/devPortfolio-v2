@@ -10,7 +10,7 @@
 }
 
 body{
-    background-image: linear-gradient(var(--prpl) 65%, var(--lt-grn));
+    background-image: linear-gradient(var(--prpl) 80%, var(--lt-grn));
     height: 100vh;
     margin: 0;
     overflow: hidden;
@@ -41,8 +41,8 @@ button:active {
 .container--all{
     display: flex;
     flex-direction: column;
-    width: 100%;
     justify-content: center;
+    width: 100%;
 }
 
 .container--content{
@@ -76,7 +76,7 @@ button:active {
 }
 
 .container--menu{
-    bottom: 30px;
+    bottom: 20px;
     color: var(--lt-blu);
     display: flex;
     flex-direction: row;
@@ -105,105 +105,17 @@ button:active {
     color: var(--lt-grn);
 } 
 
-@media screen and (min-width: 300px) and (max-width: 414px){
-    .container--menu{
-        bottom: 8px;
-        position: fixed;
-    }
-    .container--menu > h2{
-        font-size: 18px;
-        padding: 2px;
-    }
-}
-
-@media screen and (min-height: 736px) and (min-width: 375px){
-    .container--menu{
-        bottom: 10px;
-        position: fixed;
-      }
-    .container--menu > h2{
-        font-size: 25px;
-        padding: 6px;
-    }
-}
-
-@media screen and (min-height: 812px) and (min-width: 375px){
-    .header{
-        margin-top: 2.5rem;
-    }
-    .header > h2{
-        font-size: 38px;
-    }
-    .header > p{
-        font-size: 30px
-    }
-}
-
-@media screen and (min-width: 600px) and (max-width: 899px) {
-    .header{
-        margin-top: 2.5rem;
-    }
-    .header > h2{
-        font-size: 36px;
-    }
-    .header > p{
-        font-size: 28px
-    }
-    .container--menu{
-        bottom: 42%;
-        flex-direction: column;
-        right: 3%;
-        width: fit-content;
-    }
-    .container--menu > h2{
-        border: 2px solid var(--lt-grn);
-        font-size: 30px;
-        margin: 15px;
-        padding: 8px;
-        text-align: center;
-        width: 110px;
-    }
-}
-
-@media screen and (min-width: 900px){
-    .header{
-        align-content: flex-start;
-        justify-content: flex-start;
-        margin-top: 1.5rem;
-    }
-    .header:nth-child(2){
-        padding-left: 5rem;
-        text-align: center;
-        width: fit-content;
-    }
-    .header > h2{
-        font-size: 30px;
-    }
-    .header > p{
-        font-size: 24px;
-    }
-    .container--menu{
-        top: 2%;
-        flex-direction: column;
-        right: 2%;
-        width: fit-content;
-    }
-    .container--menu > h2{
-        border: 2px solid var(--lt-grn);
-        font-size: 24px; 
-    }
-}
 /* svg styles=============================================================================== */
 .container--svg{
     display: flex;
     align-content: flex-start;
     justify-content: center;
+    margin: 0 auto;
+    max-width: 320px;
+    max-height: 500px;
     overflow: visible;
+    position: relative;
     width: 100%;
-}
-
-.svg--main{
-    overflow: visible;
 }
 
 .flower--petals{
@@ -212,30 +124,4 @@ button:active {
 
 .flower--centers{
     fill: var(--orng);
-}
-
-@media screen and (min-width: 300px) and (max-width: 374px){
-    .main--svg{
-        overflow: visible;
-        position: fixed;
-        top: 10%;
-        transform: scale(.65);
-    }
-}
-
-@media screen and (min-height: 736px) and (min-width: 375px){
-    .main--svg{
-      margin-top: 1.5rem;
-    }
-}
-
-@media screen and (min-width: 600px) and (max-width: 899px) {
-    .container--svg{
-        justify-content: flex-start;
-    }
-    .main--svg{
-        height: 80vh;
-        padding-left: 2rem;
-        transform: scale(1.2);
-    }
 }
