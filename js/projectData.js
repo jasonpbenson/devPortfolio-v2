@@ -5,6 +5,7 @@ let builtWith = 'built with: '
 let projects = [
     {
         logo: `${logoPath}enchanted_splatter_OffRegTrace_ed.svg`,
+        title: 'enchantedLifeGoods',
         repoLink: 'https://github.com/jasonpbenson/enchantedLifeGoods',
         demoLink: null,
         screenCap: `${screenCapPath}elg_screen1.png`,
@@ -15,6 +16,7 @@ let projects = [
     },
     {
         logo: `${logoPath}/emOceans-logo-1.svg`,
+        title: 'emoceans',
         repoLink: 'https://github.com/jasonpbenson/backEndProject',
         demoLink: 'https://emoceans.jpbenson.com',
         screenCap: `${screenCapPath}emOceans_screen2.png`,
@@ -28,6 +30,7 @@ let projects = [
     },
     {
         logo: `${logoPath}/pithos-logo-1.svg`,
+        title: 'pithos',
         repoLink: 'https://github.com/jasonpbenson/FrontEndProject-Pithos',
         demoLink: 'https://pithos.jpbenson.com',
         screenCap: `${screenCapPath}pithos_screen1.png`,

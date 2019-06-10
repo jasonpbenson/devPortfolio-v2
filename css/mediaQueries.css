@@ -2,6 +2,12 @@
 /* queries for mainStyles======================================== */
 
 @media all and (max-width: 320px){
+    .header{
+        margin: 1.5rem auto 0 auto;
+    }
+    .menu--selector{
+        margin: 0 .2rem;
+    }
     .container--svg{
         top: -3rem;
         transform: scale(.8);
@@ -16,13 +22,29 @@
         width: 25%;
     }
 
+    .header:hover{
+        /* background-color: var(--gld);
+        color: var(--orng); */
+        filter: invert(1);
+    }
+
     .container--menu{
-        bottom: 20%;
         flex-direction: column;
         justify-content: center;
-        left: 8%;
+        left: 2%;
+        top: 53%;
         width: 25%;
     }
+
+    .menu--selector:hover{
+        /* background-color: var(--gld);
+        color: var(--orng); */
+        filter: invert(1);
+    }
+
+    .menu--selector:active{
+        box-shadow: inset 0 0 5px var(--drk-grn);
+    } 
 
     .container--menu > h2{
         margin: 5px auto;
@@ -30,8 +52,53 @@
 
     .container--svg{
         justify-content: flex-end;
-        margin-right: 25%;
+        margin-right: 18%;
+        top: -4rem;
         transform: scale(1.4);
+    }
+}
+
+@media all and (min-height: 812px){
+    .header{
+        position: relative;
+        top: -4%;
+    }
+    .header > h2{
+        font-size: 1.8rem;
+    }
+    .header > p{
+        font-size: 1.5rem;
+    }
+    .container--svg{
+        margin-top: 5%;
+        transform: scale(1.2);
+    }
+}
+
+@media all and (min-height: 1024px){
+    .header{
+        padding: 2%;
+        position: relative;
+        top: -20%;
+    }
+    .header > h2{
+        font-size: 2.5rem;
+    }
+    .header > p{
+        font-size: 2rem;
+    }
+    .container--menu{
+        bottom: 5%;
+    }
+    .menu--selector{
+        font-size: 2.5rem;
+        padding: 1rem;
+        width: 10rem;
+    }
+    .container--svg{
+        margin-top: -8%;
+        transform: scale(1.6);
+        margin-right: 30%;
     }
 }
 
@@ -41,12 +108,157 @@
         height: 230px;
         padding: 40px 15px;
     }
+
+    .contentIcon{
+        width: 22%;
+    }
+
+    /* about modal */
+    .briefStatement{
+        margin: .5rem 8%;
+    }
+
+    /* projects modal */
+    .projectLogo{
+        max-height: 2.5rem;
+    }
+    .projectDescription{
+        margin: 0 8%;
+        margin-bottom: 8%;
+    }
+
+    /* contact modal */
+    .contactContainer p{
+        margin: .2% auto;
+        font-size: 14px;
+    }
+    .linkContainer{
+        margin: 1rem auto;
+        /* margin-top: 1rem; */
+    }
+    .linkContainer a{
+        font-size: 14px;
+        margin: 0 1%;
+    }
 }
 
 @media all and (min-width: 980px){
     .modal{
-        height: 450px;
-        padding: 120px 10px;
-        width: 380px;
+        height: 62%;
+        padding: 10% 4%;
+        padding-right: 5%; /* to correct weird issue with modal appearing off-center... */
+        width: 41%;
+    }
+    .contentIcon{
+        width: 17%;
+    }
+
+    /* about modal */
+    .briefStatement{
+        font-size: 1.2rem;
+    }
+    .section > h3{
+        font-size: 1.75rem;
+    }
+    .techIcon{
+        font-size: 2.5rem;
+    }
+    /* projects modal */
+    .projectLogo{
+        max-height: 6rem;
+    }
+    .projectLinks > a{
+        font-size: 1.5rem;
+        padding: .5rem;
+    }
+    .projectLinks > a:hover{
+        filter: invert(1);
+    }
+
+    /* contact modal */
+    .linkContainer > a{
+        font-size: 1.5rem;
+        padding: .5rem;
+    }
+    .linkContainer > a:hover{
+        filter: invert(1);
+    }
+    .contactContainer > p{
+        font-size: 1.2rem;
     }
 }
+
+@media all and (min-height: 812px){
+    .modal{
+        height: 380px;
+        width: 340px;
+    }
+    /* about modal */
+    .briefStatement{
+        font-size: 1.5rem;
+    }
+    .section > h3{
+        font-size: 1.8rem;
+    }
+    .techIcon{
+        font-size: 2.5rem;
+        width: fit-content;
+    }
+    /* contact modal */
+    .linkContainer > a{
+        font-size: 1.5rem;
+        width: fit-content;
+    }
+    .contactContainer > p{
+        font-size: 1.5rem;
+    }
+}
+
+@media all and (min-height: 1024px){
+    .modal{
+        height: 46%;
+        padding: 10% 0;
+        padding-right: 2%; /* to correct weird issue with modal appearing off-center... */
+        width: 60%;
+    }
+    
+    /* about modal */
+    .briefStatement{
+        font-size: 1.5rem;
+    }
+    .section > h3{
+        font-size: 2rem;
+    }
+    .techIcon{
+        font-size: 3rem;
+    }
+
+    /* projects modal */
+    .projectLogo{
+        max-height: 8rem;
+    }
+    .projectLinks > a{
+        font-size: 2rem;
+        padding: .5rem;
+    }
+    .projectDescription{
+        font-size: 1.5rem;
+    }
+    .projectTech{
+        font-size: 1.25rem;
+        padding: 1rem;
+    }
+    
+    /* contact container */
+    .linkContainer{
+        margin-top: 3rem;
+    }
+    .linkContainer > a{
+        font-size: 2rem;
+        padding: .5rem;
+    }
+    .contactContainer > p{
+        font-size: 1.75rem;
+    }
+}
+

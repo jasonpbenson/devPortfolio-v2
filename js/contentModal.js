@@ -6,16 +6,34 @@ const aboutContent = document.createElement('div');
 aboutContent.classList.add("aboutContainer");
 aboutContent.setAttribute("id", "displayNone")
 contentModal.appendChild(aboutContent);
+const aboutTetherInstance = new Tether({
+    element: contentModal,
+    target: flowerCenter1,
+    attachment: 'middle center',
+    targetAttachment: 'middle center'
+});
 
 const projectsContent = document.createElement('div');
 projectsContent.classList.add("projectsContainerAll");
 projectsContent.setAttribute("id", "displayNone")
 contentModal.appendChild(projectsContent);
+const projectsTetherInstance = new Tether({
+    element: contentModal,
+    target: flowerCenter2,
+    attachment: 'middle center',
+    targetAttachment: 'middle center'
+});
 
 const contactContent = document.createElement('div');
 contactContent.classList.add("contactContainer");
 contactContent.setAttribute("id", "displayNone")
 contentModal.appendChild(contactContent);
+const contactTetherInstance = new Tether({
+    element: contentModal,
+    target: flowerCenter3,
+    attachment: 'middle center',
+    targetAttachment: 'middle center'
+});
 
 //create aboutContent child elements and populate with data
 const showAboutContent = (data)=>{
@@ -86,13 +104,6 @@ aboutSelector.addEventListener('click', (e)=>{
             aboutContent.removeAttribute("id", "displayNone");
         }, 1800);
 
-        const aboutTetherInstance = new Tether({
-            element: contentModal,
-            target: flowerCenter1,
-            attachment: 'middle center',
-            targetAttachment: 'middle center'
-        });
-        
         setTimeout(function(){
             aboutTetherInstance.position();
         }, 1800)
@@ -117,6 +128,7 @@ const showProjectsContent = function(data){
         let projectLogo = document.createElement("img");
         projectLogo.classList.add("projectLogo");
         projectLogo.setAttribute('src', element.logo);
+        projectLogo.setAttribute('name', element.title);
         projectsContent.appendChild(projectContainerEach);
         projectContainerEach.appendChild(projectLogo);
 
@@ -143,15 +155,14 @@ const showProjectsContent = function(data){
             projectLinks.appendChild(demoLink);
         };
 
-        //project preview image 
-        //desktop only or until i think of a better solution 
-        //than clip path to maintain the illusion of content
-        //being inside circle...
-        let projectPreview = document.createElement("img");
-        projectPreview.classList.add("projectScreenCap");
-        projectPreview.setAttribute("src", element.screenCap);
-        projectPreview.classList.add("displayNone");
-        projectContainerEach.appendChild(projectPreview);
+        //project preview image [removed for now]
+        // let projectPreviewContainer = document.createElement('div');
+        // projectPreviewContainer.classList.add("projectPreviewContainer", "displayNone")
+        // let projectPreview = document.createElement("img");
+        // projectPreview.classList.add("`${element.title}Img`", "ProjectPreviewImg", "displayNone");
+        // projectPreview.setAttribute("src", element.screenCap);
+        // projectContainerEach.appendChild(projectPreview);
+        // projectContainerEach.appendChild(projectPreviewContainer);
 
         //project desctiption
         let projectDescription = document.createElement("p");
@@ -191,14 +202,7 @@ projectSelector.addEventListener('click', (e)=>{
         }, 1800);
         setTimeout(function(){
             projectsContent.removeAttribute("id", "displayNone");
-        }, 1800)
-        
-        const projectsTetherInstance = new Tether({
-            element: contentModal,
-            target: flowerCenter2,
-            attachment: 'middle center',
-            targetAttachment: 'middle center'
-        });
+        }, 1800);
         
         setTimeout(function(){
             projectsTetherInstance.position();
@@ -264,13 +268,6 @@ contactSelector.addEventListener('click', (e)=>{
         setTimeout(function(){
             contactContent.removeAttribute("id", "displayNone");
         }, 1800)
-        
-        const contactTetherInstance = new Tether({
-            element: contentModal,
-            target: flowerCenter3,
-            attachment: 'middle center',
-            targetAttachment: 'middle center'
-        });
         
         setTimeout(function(){
             contactTetherInstance.position();

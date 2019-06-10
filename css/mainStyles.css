@@ -9,6 +9,13 @@
     --paragraph-font: 'Overlock', cursive;
 }
 
+html{
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    width: 100vw;
+}
+
 body{
     background-image: linear-gradient(var(--prpl) 80%, var(--lt-grn));
     height: 100vh;
@@ -26,22 +33,19 @@ a {
     display: block;
 }
 
-button:focus {
+a:focus {
     outline:none;
     outline-style: none;
     box-shadow: none;
     }
-
-button:active {
-    outline:none;
-}
-
 /*========================================================================================== */
 
 .container--all{
     display: flex;
     flex-direction: column;
+    height: 100%;
     justify-content: center;
+    overflow: hidden;
     width: 100%;
 }
 
@@ -50,12 +54,17 @@ button:active {
 }
 
 .header{
+    border-radius: 15px;
+    border: 1px solid var(--drk-grn);
     color: var(--lt-blu);
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     font-family: var(--header-font);
     justify-content: center;
-    margin-top: 1.5rem;
+    margin: 0 auto;
+    padding: .5rem; 
+    width: fit-content;
 }
 
 .header > h2, 
@@ -67,41 +76,41 @@ button:active {
 .header > p{
     color: var(--lt-grn);
     font-family: var(--paragraph-font);
-    margin-top: .5rem;
-    font-size: 20px;
+    margin-top: .2rem;
+    font-size: 1.2rem;
 }
 
-.header > h2:active{
-    text-shadow: 0px 1px 2px var(--drk-grn);
+.header:active{
+    border: 1px solid var(--prpl);
+    box-shadow: inset 0 2px 5px var(--drk-grn);
+    color: var(--lt-grn);
 }
 
 .container--menu{
-    bottom: 20px;
+    bottom: 4%;
     color: var(--lt-blu);
     display: flex;
     flex-direction: row;
     font-family: var(--header-font);
     height: fit-content;
-    justify-content: space-around;
-    position: fixed;
+    justify-content: center;
+    position: absolute;
     width: 100vw;
 }
 
-.container--menu > h2{
+.menu--selector{
+    cursor: pointer;
     border-radius: 15px;
     border: 1px solid var(--drk-grn);
-    margin: 5px;
-    padding: 5px;
+    margin: 0 1rem;
+    padding: .4rem;
     text-align: center;
-    width: 92px;
+    width: 5.85rem;
 }
 
-.container--menu > h2:active{
+.menu--selector:active{
     border: 1px solid var(--prpl);
-    box-shadow: 0px 1px 2px var(--drk-grn);
-}
-
-.selector:active{
+    box-shadow: inset 0 0 5px var(--drk-grn);
     color: var(--lt-grn);
 } 
 
@@ -118,10 +127,17 @@ button:active {
     width: 100%;
 }
 
+.main--svg{
+    max-width: 320px;
+    max-height: 500px;
+    overflow: visible;
+}
+
 .flower--petals{
     fill: var(--gld);
 }
 
 .flower--centers{
     fill: var(--orng);
+    cursor: pointer;
 }
