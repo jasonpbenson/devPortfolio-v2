@@ -35,6 +35,12 @@ const contactTetherInstance = new Tether({
     targetAttachment: 'middle center'
 });
 
+window.addEventListener('resize', (e) => {
+    aboutTetherInstance.position();
+    projectsTetherInstance.position();
+    contactTetherInstance.position();
+});
+
 //create aboutContent child elements and populate with data
 const showAboutContent = (data)=>{
 
