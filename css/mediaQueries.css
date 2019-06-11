@@ -5,17 +5,25 @@
     .header{
         margin: 1.5rem auto 0 auto;
     }
+    .header > h2{
+        font-size: 1.2rem;
+    }
+    .container--menu{
+        top: 16%;
+    }
     .menu--selector{
         margin: 0 .2rem;
+        font-size: 1rem;
     }
     .container--svg{
-        top: -3rem;
-        transform: scale(.8);
+        top: .6rem;
+        transform: scale(.9);
     }
 }
 
 @media all and (min-width: 980px){
     .header{
+        border: 1px solid var(--drk-grn);
         justify-content: flex-start;
         margin-left: 8%;
         margin-top: 4%;
@@ -52,7 +60,7 @@
 
     .container--svg{
         justify-content: flex-end;
-        margin-right: 18%;
+        right: 40%;
         top: -4rem;
         transform: scale(1.4);
     }
@@ -88,7 +96,7 @@
         font-size: 2rem;
     }
     .container--menu{
-        bottom: 5%;
+       top: 15%;
     }
     .menu--selector{
         font-size: 2.5rem;
@@ -105,8 +113,10 @@
 /* queries for modalStyles======================================= */
 @media all and (max-width: 320px){
     .modal{
-        height: 230px;
+        height: 16.3rem;
+        left: -12.85rem;
         padding: 40px 15px;
+        top: -15.6rem;
     }
 
     .contentIcon{

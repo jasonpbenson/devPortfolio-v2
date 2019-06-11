@@ -35,12 +35,6 @@ const contactTetherInstance = new Tether({
     targetAttachment: 'middle center'
 });
 
-window.addEventListener('resize', (e) => {
-    aboutTetherInstance.position();
-    projectsTetherInstance.position();
-    contactTetherInstance.position();
-});
-
 //create aboutContent child elements and populate with data
 const showAboutContent = (data)=>{
 
@@ -105,16 +99,10 @@ aboutSelector.addEventListener('click', (e)=>{
         //display modal and about content
         setTimeout(function(){
             contentModal.classList.remove("displayNone");
-        }, 1800);
-        setTimeout(function(){
             aboutContent.removeAttribute("id", "displayNone");
-        }, 1800);
-
-        setTimeout(function(){
-            aboutTetherInstance.position();
-        }, 1800)
-    }
-
+                aboutTetherInstance.position();
+        }, 2000);
+    };
 });
 
 //create projectsContent child elements and populate with data
@@ -205,14 +193,9 @@ projectSelector.addEventListener('click', (e)=>{
         //display modal and projects content
         setTimeout(function(){
             contentModal.classList.remove("displayNone");
-        }, 1800);
-        setTimeout(function(){
             projectsContent.removeAttribute("id", "displayNone");
-        }, 1800);
-        
-        setTimeout(function(){
             projectsTetherInstance.position();
-        }, 1800)
+        }, 2000);
     }
 });
 
@@ -270,14 +253,9 @@ contactSelector.addEventListener('click', (e)=>{
         //display modal and projects content
         setTimeout(function(){
             contentModal.classList.remove("displayNone");
-        }, 1800);
-        setTimeout(function(){
             contactContent.removeAttribute("id", "displayNone");
-        }, 1800)
-        
-        setTimeout(function(){
             contactTetherInstance.position();
-        }, 1800)
+        }, 2000);
     }
 });
 

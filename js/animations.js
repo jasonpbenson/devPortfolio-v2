@@ -26,7 +26,7 @@ aboutSelector.addEventListener('click', (e)=>{
         fill: '#358f6e',
         loop: false,
         scale: 1.3,
-        translateX: -55.2,
+        translateX: -60,
         translateY: -50
     })
     //reset non-target elements==============================================================
@@ -87,7 +87,7 @@ projectSelector.addEventListener('click', (e)=>{
         fill: '#358f6e',
         loop: false,
         scale: 1.3,
-        translateX: -56,
+        translateX: -60,
         translateY: -50,
     })
     //reset non-target elements==============================================================
@@ -138,7 +138,7 @@ contactSelector.addEventListener('click', (e)=>{
         easing: 'spring(1, 100, 10, 1)',
         fill: '#264c3a',
         scale: 1.5,
-        translateX: -180,
+        translateX: -182,
         translateY: -80,
     })
     anime({
@@ -149,7 +149,7 @@ contactSelector.addEventListener('click', (e)=>{
         fill: '#358f6e',
         loop: false,
         scale: 1.3,
-        translateX: -56,
+        translateX: -60,
         translateY: -50,
     })
     //reset non-target elements==============================================================
