@@ -23,7 +23,6 @@
 
 @media all and (min-width: 980px){
     .header{
-        border: 1px solid var(--drk-grn);
         justify-content: flex-start;
         margin-left: 8%;
         margin-top: 4%;
@@ -38,8 +37,7 @@
 
     .container--menu{
         flex-direction: column;
-        justify-content: center;
-        left: 2%;
+        left: 8%;
         top: 53%;
         width: 25%;
     }
@@ -60,13 +58,14 @@
 
     .container--svg{
         justify-content: flex-end;
-        right: 40%;
+        right: -8%;
         top: -4rem;
         transform: scale(1.4);
+        width: 25%;
     }
 }
 
-@media all and (min-height: 812px){
+@media all and (min-height: 736px){
     .header{
         position: relative;
         top: -4%;
@@ -154,10 +153,9 @@
 
 @media all and (min-width: 980px){
     .modal{
-        height: 62%;
-        padding: 10% 4%;
-        padding-right: 5%; /* to correct weird issue with modal appearing off-center... */
-        width: 41%;
+        height: 25rem;
+        padding: 7% 2%;
+        width: 25rem;
     }
     .contentIcon{
         width: 17%;
@@ -198,10 +196,10 @@
     }
 }
 
-@media all and (min-height: 812px){
+@media all and (min-height: 736px){
     .modal{
-        height: 380px;
-        width: 340px;
+        height: 21.25rem;
+        width: 21.25rem;
     }
     /* about modal */
     .briefStatement{

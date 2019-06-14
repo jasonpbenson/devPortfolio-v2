@@ -100,7 +100,7 @@ aboutSelector.addEventListener('click', (e)=>{
         setTimeout(function(){
             contentModal.classList.remove("displayNone");
             aboutContent.removeAttribute("id", "displayNone");
-                aboutTetherInstance.position();
+            aboutTetherInstance.position();
         }, 2000);
     };
 });
@@ -262,7 +262,7 @@ contactSelector.addEventListener('click', (e)=>{
 //reset modal
 
 resetButton.addEventListener('click', (e)=>{
-    //hide all 
+    //hide modal container and content
     contentModal.classList.add("displayNone")
     aboutContent.setAttribute("id", "displayNone");
     projectsContent.setAttribute("id", "displayNone");

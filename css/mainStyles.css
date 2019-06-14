@@ -12,6 +12,7 @@
 html{
     height: 100vh;
     margin: 0;
+    max-height: 100vh;
     overflow: hidden;
     width: 100vw;
 }
@@ -20,6 +21,7 @@ body{
     background-image: linear-gradient(var(--prpl) 80%, var(--lt-grn));
     height: 100vh;
     margin: 0;
+    max-height: 100vh;
     overflow: hidden;
     width: 100vw;
 }
@@ -53,8 +55,8 @@ a:focus {
     width: 100%;
 }
 
+/* header */
 .header{
-    border-radius: 15px;
     color: var(--lt-blu);
     cursor: pointer;
     display: flex;
@@ -83,6 +85,7 @@ a:focus {
     color: var(--lt-grn);
 }
 
+/* buttons */
 .container--menu{
     color: var(--lt-blu);
     display: flex;
@@ -90,14 +93,14 @@ a:focus {
     height: fit-content;
     justify-content: center;
     position: absolute;
-    top: 22%;
+    top: 8rem;
     width: 100vw;
 }
 
 .menu--selector{
     cursor: pointer;
     border-radius: 15px;
-    border: 1px solid var(--drk-grn);
+    border: 1px solid var(--lt-grn);
     font-family: var(--header-font);
     font-size: 1.2rem;
     margin: 0 1rem;
@@ -121,7 +124,7 @@ a:focus {
     max-height: 32rem;
     overflow: visible;
     position: relative;
-    top: 4rem;
+    top: 3rem;
     width: 100%;
 }
 
