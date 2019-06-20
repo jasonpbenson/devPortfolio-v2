@@ -68,21 +68,24 @@ a:focus {
     width: fit-content;
 }
 
-.header > h2, 
+.header > h1, 
 .header > p{
     text-align: center;
     margin: 0;
 }
 
-.header > p{
-    color: var(--lt-grn);
-    font-family: var(--paragraph-font);
-    margin-top: .2rem;
-    font-size: 1.2rem;
+.header > h1{
+    font-size: 24px;
 }
 
-.header:active{
-    color: var(--lt-grn);
+.header > p{
+    background-color: var(--gld);
+    border-radius: 15px;
+    color: var(--prpl);
+    font-family: var(--paragraph-font);
+    margin-top: .5rem;
+    padding: .1rem;
+    font-size: 1.2rem;
 }
 
 /* buttons */
