@@ -190,7 +190,8 @@
         padding: .5rem;
     }
     .linkContainer > a:hover{
-        filter: invert(1);
+        color: var(--orng);
+        border: 1px solid var(--gld);
     }
     .contactContainer > p{
         font-size: 1.2rem;
