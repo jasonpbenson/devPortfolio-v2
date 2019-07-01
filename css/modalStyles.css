@@ -1,148 +1,194 @@
-.modal::-webkit-scrollbar{
-    background: none;
+.modal {
+  animation: fadeIn, expandIn 2s;
+  background-image: linear-gradient(#afcfde 82%, #afcfde00);
+  border-radius: 15px;
+  box-sizing: border-box;
+  height: 74%;
+  left: 2.5%;
+  overflow: hidden;
+  padding: 0 5%;
+  position: fixed;
+  text-align: center;
+  top: 24%;
+  width: 95%;
+  -webkit-animation: fadeIn 2s;
+  z-index: 500;
 }
 
-.modal::-webkit-scrollbar-corner{
-    display: none;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-.modal{
-    animation: fadeIn 2s;
-    box-sizing: border-box;
-    height: 18.75rem;
-    overflow-y: scroll;
-    padding: 70px 10px;
-    scroll-behavior: smooth;
-    text-align: center;
-    width: 19.25rem;
-    -webkit-animation: fadeIn 2s; 
-    z-index: 500;
-}
+/* navigation arrows========================================================================== */
 
-@keyframes fadeIn{
-    from {opacity: 0;}
-    to {opacity: 1;}
+.navArrow {
+  left: 41%;
+  position: fixed;
+  height: 10%;
+  top: 74%;
+  z-index: 600;
 }
 
 /* displayNone applied dynamically to content modal and child sections======================== */
 
-#displayNone{
-    display: none;
+#displayNone {
+  display: none;
 }
 
-.displayNone{
-    display: none;
+.displayNone {
+  display: none;
 }
 
 /* icon at head of each section============================================================= */
-.contentIcon{
-    margin: 0 auto;
-    width: 23%;
+.contentIcon {
+  margin: 0 auto;
+  margin-top: 15%;
+  width: 23%;
 }
+
+/* remove scrollbar from content containers================================================= */
+
+/* .aboutContainer,
+.projectsContainerAll::-webkit-scrollbar{
+    background: none;
+}
+
+.aboutContainer,
+.projectsContainerAll::-webkit-scrollbar-corner{
+    display: none;
+} */
 
 /* 'about' modal============================================================================ */
 
-.aboutContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    left: 3.7%;
-    position: relative;
-    width: 100%;
+.aboutContainer {
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  justify-content: flex-start;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  width: 100%;
 }
 
-.briefStatement{
-    color: var(--prpl);
-    font-family: var(--paragraph-font);
-    font-size: 1rem;
-    margin: 1rem auto;
-    padding: 1rem;
+.section {
+  box-sizing: border-box;
+  color: var(--prpl);
+  display: flex;
+  align-content: flex-start;
+  flex-direction: column;
+  flex-flow: wrap;
+  height: 395px;
+  justify-content: center;
+  padding-top: 30%;
+  text-align: center;
+  width: inherit;
 }
 
-.aboutTechContainer{
-    color: var(--prpl);
-    display: flex;
-    flex-direction: column;
-    flex-flow: wrap;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
+.section > h3 {
+  color: var(--prpl);
+  font-family: var(--header-font);
+  font-size: 1.4rem;
+  margin: 1rem auto;
+  padding: 0.5rem;
+  width: 100%;
 }
 
-.section{
-    display: flex;
-    flex-direction: column;
-    flex-flow: wrap;
-    justify-content: center;
-    text-align: center;
-    color: var(--prpl);
-    width: inherit;
+/* .section class also applied to this container for sake of animating scroll */
+.introSectionContainer {
+  /* height: 395px; */
+  padding-top: 0;
 }
 
-.section > h3{
-    color: var(--prpl);
-    font-family: var(--header-font);
-    font-size: 1.4rem;
-    margin: 1rem auto;
-    padding: .5rem;
-    width: 100%;
+.aboutStatement {
+  color: var(--prpl);
+  font-family: var(--paragraph-font);
+  font-size: 1rem;
+  margin: 1rem auto;
+  padding: 1rem;
 }
 
-.iconContainer{
-    display: flex;
-    flex-direction: row;
-    flex-flow: wrap;
-    justify-content: center;
+.aboutTechContainer {
+  color: var(--prpl);
+  display: flex;
+  flex-direction: column;
+  flex-flow: wrap;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
 }
 
-.techIcon{
-    color: var(--prpl);
-    font-size: 2rem;
-    margin: .8rem;
-    width: fit-content;
+.iconContainer {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  justify-content: center;
+}
+
+.techIcon {
+  color: var(--prpl);
+  font-size: 3rem;
+  margin: 0.5rem;
+  width: fit-content;
 }
 
 /* 'projects' modal ======================================================================== */
-.projectsContainerAll{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    left: 3.7%;
-    position: relative;
-    width: 100%;
+.projectsContainerAll {
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-start;
+  overflow-y: hidden;
+  padding-bottom: 50%;
+  width: 100%;
 }
 
-.projectContainerEach{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 1.5rem;
+.projectStatement {
+  color: var(--prpl);
+  font-family: var(--paragraph-font);
+  font-size: 1rem;
+  margin: 1rem auto;
+  padding: 1rem;
 }
 
-.projectLogo{
-    margin-top: .5rem;
-    max-height: 4rem;
+.projectContainerEach {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1.5rem;
+  margin-top: 100%;
 }
 
-.projectLinks{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin: 4% auto;
-    width: 100%;
+.projectLogo {
+  margin-top: 0.5rem;
+  max-height: 4rem;
 }
 
-.projectLinks > a{
-    border: 1px solid var(--prpl);
-    border-radius: 15px;
-    color: var(--prpl);
-    cursor: pointer;
-    font-family: var(--paragraph-font);
-    font-size: 1rem;
-    margin: 5px auto;
-    padding: .5rem;
-    text-align: center;
-    width: fit-content;
+.projectLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 4% auto;
+  width: 100%;
+}
+
+.projectLinks > a {
+  border: 1px solid var(--prpl);
+  border-radius: 15px;
+  color: var(--prpl);
+  cursor: pointer;
+  font-family: var(--paragraph-font);
+  font-size: 1rem;
+  margin: 5px auto;
+  padding: 0.5rem;
+  text-align: center;
+  width: fit-content;
 }
 
 /* .projectScreenCap{
@@ -150,62 +196,61 @@
     padding: .75rem;
 } */
 
-.projectDescription{
-    color: var(--prpl);
-    font-size: 1.2rem;
-    font-family: var(--paragraph-font);
+.projectDescription {
+  color: var(--prpl);
+  font-size: 1.2rem;
+  font-family: var(--paragraph-font);
 }
 
-.projectTech{
-    border: 1px dashed var(--prpl);
-    color: var(--prpl);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    font-size: 1rem;
-    font-family: var(--paragraph-font);
-    font-weight: bolder;
-    justify-content: center;
-    margin: 0 auto;
-    padding: .5rem;
-    width: 75%;
+.projectTech {
+  border: 1px dashed var(--prpl);
+  color: var(--prpl);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 1rem;
+  font-family: var(--paragraph-font);
+  font-weight: bolder;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0.5rem;
+  width: 75%;
 }
 
 /* 'contact' modal====================================================== */
 
-.contactContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    left: 2.9%;
-    margin: 0 auto;
-    position: relative;
-    text-align: center;
+.contactContainer {
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-start;
+  width: 100%;
 }
 
-.linkContainer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin: 1rem auto;
-    margin-top: 2rem;
+.linkContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 1rem auto;
+  margin-top: 2rem;
 }
 
-.linkContainer > a{
-    color: var(--prpl);
-    border: 1px solid var(--prpl);
-    border-radius: 15px;
-    font-family: var(--paragraph-font);
-    font-size: 1rem;
-    margin: 0 6%;
-    padding: 4%;
-    width: fit-content;
+.linkContainer > a {
+  color: var(--prpl);
+  border: 1px solid var(--prpl);
+  border-radius: 15px;
+  font-family: var(--paragraph-font);
+  font-size: 1rem;
+  margin: 0 6%;
+  padding: 4%;
+  width: fit-content;
 }
 
-.contactContainer > p{
-    color: var(--prpl);
-    font-family: var(--paragraph-font);
-    font-size: 1rem;
-    margin: 1% auto;
-    text-align: center;
+.contactContainer > p {
+  color: var(--prpl);
+  font-family: var(--paragraph-font);
+  font-size: 1rem;
+  margin: 1% auto;
+  text-align: center;
 }
