@@ -1,52 +1,89 @@
 const aboutNavArrow = document.getElementById("aboutNavArrow");
+const projectsNavArrow = document.getElementById("projectsNavArrow");
 
-// counter to track nav clicks and disable/enable nav 'buttons'
-let scrollPosition = 0;
-console.log("initial scroll value: " + scrollPosition);
-
-// scroll animation for 'about' section
+// scroll animation for 'about' section*
 function aboutScrollHandler() {
-  aboutNavArrow.addEventListener("click", function scroller() {
-    console.log("current scroll value: " + scrollPosition);
-    scrollPosition += 1;
-    if (scrollPosition <= 4) {
-      aboutNavArrow.setAttribute("src", "assets/svg/down-arrow_variant.svg");
+  let aboutScrollPosition = 0;
+  //   console.log("initial about scroll value: " + aboutScrollPosition);
+  aboutNavArrow.addEventListener("click", function scroller(e) {
+    aboutScrollPosition++;
+    // console.log("current about scroll value: " + aboutScrollPosition);
+    if (aboutScrollPosition <= 4) {
+      // scroll sections
       anime({
-        targets: ".section",
+        targets: ".aboutSections",
         translateY: [
           {
-            value: "-=100%",
-            duration: 1000,
-            easing: "easeInOutQuad"
+            value: "-=100%"
           }
         ]
       });
     }
-    if (scrollPosition == 5) {
+    if (aboutScrollPosition == 5) {
       anime({
         targets: "#aboutNavArrow",
-        rotate: "180deg",
-        duration: 500
+        rotate: "180deg"
       });
     }
-    if (scrollPosition > 5) {
+    if (aboutScrollPosition > 5) {
       anime({
-        targets: ".section",
+        targets: ".aboutSections",
         translateY: [
           {
-            value: "+=400%",
-            duration: 1000,
-            easing: "easeInOutQuad"
+            value: "+=400%"
           }
         ]
       });
       anime({
         targets: "#aboutNavArrow",
-        rotate: "360deg",
-        duration: 500,
-        delay: 1000
+        rotate: "360deg"
       });
-      scrollPosition = 0;
+      aboutScrollPosition = 0;
     }
   });
 }
+
+// scroll animation for 'projects' section*
+function projectsScrollHandler() {
+  let projectsScrollPosition = 0;
+  //   console.log("initial projects scroll value: " + projectsScrollPosition);
+  projectsNavArrow.addEventListener("click", function scroller() {
+    // console.log("current project scroll value: " + projectsScrollPosition);
+    projectsScrollPosition += 1;
+    if (projectsScrollPosition <= 3) {
+      anime({
+        targets: ".projectSections",
+        translateY: [
+          {
+            value: "-=100%"
+          }
+        ]
+      });
+    }
+    if (projectsScrollPosition == 4) {
+      anime({
+        targets: "#projectsNavArrow",
+        rotate: "180deg"
+      });
+    }
+    if (projectsScrollPosition > 4) {
+      anime({
+        targets: ".projectSections",
+        translateY: [
+          {
+            value: "+=300%"
+          }
+        ]
+      });
+      anime({
+        targets: "#projectsNavArrow",
+        rotate: "360deg"
+      });
+      projectsScrollPosition = 0;
+      //   console.log("current project scroll value: " + projectsScrollPosition);
+    }
+  });
+}
+
+// *would like to consolidate into single function, but I'm not sure that
+// would be practical or possible with the animejs library

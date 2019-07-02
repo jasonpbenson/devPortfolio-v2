@@ -29,14 +29,17 @@ const showAboutContent = data => {
   aboutContent.appendChild(aboutNavButton);
 
   //create container for about section intro
-  let introSectionContainer = document.createElement("div");
-  introSectionContainer.classList.add("introSectionContainer", "section");
+  let aboutIntroSectionContainer = document.createElement("div");
+  aboutIntroSectionContainer.classList.add(
+    "aboutIntroSectionContainer",
+    "aboutSections"
+  );
 
   // create element for about icon
   let aboutIcon = document.createElement("img");
   aboutIcon.classList.add("contentIcon");
   aboutIcon.setAttribute("src", "assets/svg/about_variant.svg");
-  introSectionContainer.appendChild(aboutIcon);
+  aboutIntroSectionContainer.appendChild(aboutIcon);
 
   //create element for text blurb
   let aboutText = document.createElement("p");
@@ -45,9 +48,9 @@ const showAboutContent = data => {
     "I approach projects with a dual interest in design and programming, and  work to generate UI that is playful, exploratory,  and idiosyncratic. My fine art background provides a basis for critical thinking and creative  problem solving that undergirds a lifelong impulse to make things."
   );
   aboutText.appendChild(statement);
-  introSectionContainer.appendChild(aboutText);
+  aboutIntroSectionContainer.appendChild(aboutText);
 
-  aboutContent.appendChild(introSectionContainer);
+  aboutContent.appendChild(aboutIntroSectionContainer);
 
   //tech icons container
   let techContainer = document.createElement("div");
@@ -57,20 +60,17 @@ const showAboutContent = data => {
   //loop through 'aboutData' and pull section titles and tech icons
   data.forEach(element => {
     //section headers
-    let section = document.createElement("div");
-    section.classList.add("section");
-    if (element.sectionTitle === "et al") {
-      section.classList.add("lastItem");
-    }
+    let aboutSections = document.createElement("div");
+    aboutSections.classList.add("aboutSections");
     let sectionHeader = document.createElement("h3");
     let sectionHeaderText = document.createTextNode(element.sectionTitle);
-    section.appendChild(sectionHeader);
+    aboutSections.appendChild(sectionHeader);
     sectionHeader.appendChild(sectionHeaderText);
-    techContainer.appendChild(section);
+    techContainer.appendChild(aboutSections);
 
     let iconContainer = document.createElement("div");
     iconContainer.classList.add("iconContainer");
-    section.appendChild(iconContainer);
+    aboutSections.appendChild(iconContainer);
 
     //icons
     for (let i = 0; i < element.icons.length; i++) {
@@ -96,6 +96,7 @@ aboutSelector.addEventListener("click", e => {
     contentModal.classList.add("displayNone");
     //hide projects and contact content
     projectsContent.setAttribute("id", "displayNone");
+    projectsContent.scrollTop = 0;
     contactContent.setAttribute("id", "displayNone");
     //display modal and about content
     setTimeout(function() {
@@ -108,11 +109,25 @@ aboutSelector.addEventListener("click", e => {
 
 //create projectsContent child elements and populate with data
 const showProjectsContent = function(data) {
+  //create nav button
+  let projectsNavArrow = document.createElement("img");
+  projectsNavArrow.setAttribute("src", "assets/svg/down-arrow_variant.svg");
+  projectsNavArrow.setAttribute("id", "projectsNavArrow");
+  projectsNavArrow.classList.add("navArrow");
+  projectsContent.appendChild(projectsNavArrow);
+
+  //create container for projects section intro
+  let projectsIntroSectionContainer = document.createElement("div");
+  projectsIntroSectionContainer.classList.add(
+    "projectsIntroSectionContainer",
+    "projectSections"
+  );
+
   //create icon
   let projectsIcon = document.createElement("img");
   projectsIcon.setAttribute("src", "assets/svg/projects_variant.svg");
   projectsIcon.classList.add("contentIcon");
-  projectsContent.appendChild(projectsIcon);
+  projectsIntroSectionContainer.appendChild(projectsIcon);
 
   //create element for text blurb
   let projectText = document.createElement("p");
@@ -121,12 +136,17 @@ const showProjectsContent = function(data) {
     "A collection of recent team and solo projects to which I contributed UI design, graphic design, and development using various languages and frameworks."
   );
   projectText.appendChild(statement);
-  projectsContent.appendChild(projectText);
+  projectsIntroSectionContainer.appendChild(projectText);
+
+  projectsContent.appendChild(projectsIntroSectionContainer);
 
   data.forEach(element => {
     //create container for each project
     let projectContainerEach = document.createElement("div");
-    projectContainerEach.classList.add("projectContainerEach");
+    projectContainerEach.classList.add(
+      "projectContainerEach",
+      "projectSections"
+    );
 
     // create element and set attributes for project logos
     let projectLogo = document.createElement("img");
@@ -161,23 +181,16 @@ const showProjectsContent = function(data) {
 
     //project preview image
     let projectPreviewContainer = document.createElement("div");
-    projectPreviewContainer.classList.add(
-      "projectPreviewContainer",
-      "displayNone"
-    );
+    projectPreviewContainer.classList.add("projectPreviewContainer");
     let projectPreview = document.createElement("img");
-    projectPreview.classList.add(
-      "`${element.title}Img`",
-      "ProjectPreviewImg",
-      "displayNone"
-    );
+    projectPreview.classList.add("ProjectPreviewImg");
     projectPreview.setAttribute("src", element.screenCap);
     projectContainerEach.appendChild(projectPreview);
     projectContainerEach.appendChild(projectPreviewContainer);
 
     //project desctiption
     let projectDescription = document.createElement("p");
-    projectDescription.classList.add("projectDescription");
+    projectDescription.classList.add("projectDescription", "displayNone");
     let descriptionText = document.createTextNode(element.description);
     projectDescription.appendChild(descriptionText);
     projectContainerEach.appendChild(projectDescription);
@@ -206,11 +219,13 @@ projectSelector.addEventListener("click", e => {
     contentModal.classList.add("displayNone");
     //hide projects and contact content
     aboutContent.setAttribute("id", "displayNone");
+    aboutContent.scrollTop = 0;
     contactContent.setAttribute("id", "displayNone");
     //display modal and projects content
     setTimeout(function() {
       contentModal.classList.remove("displayNone");
       projectsContent.removeAttribute("id", "displayNone");
+      projectsScrollHandler();
     }, 2000);
   }
 });
@@ -260,9 +275,6 @@ contactSelector.addEventListener("click", e => {
     //if not:
     //reset conentModal so that the transition between conent sets is smooth
     contentModal.classList.add("displayNone");
-    // arrows aren't needed in this section
-    downArrow.classList.add("displayNone");
-    upArrow.classList.add("displayNone");
     //hide projects and contact content
     aboutContent.setAttribute("id", "displayNone");
     projectsContent.setAttribute("id", "displayNone");

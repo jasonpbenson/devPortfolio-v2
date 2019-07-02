@@ -24,7 +24,6 @@ body {
   margin: 0;
   max-height: 100vh;
   overflow: hidden;
-  transition: all 1sec;
   width: 100vw;
 }
 

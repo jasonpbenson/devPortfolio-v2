@@ -27,10 +27,10 @@
 /* navigation arrows========================================================================== */
 
 .navArrow {
-  left: 41%;
+  left: 75%;
   position: fixed;
   height: 10%;
-  top: 74%;
+  top: 72%;
   z-index: 600;
 }
 
@@ -76,7 +76,7 @@
   width: 100%;
 }
 
-.section {
+.aboutSections {
   box-sizing: border-box;
   color: var(--prpl);
   display: flex;
@@ -90,19 +90,17 @@
   width: inherit;
 }
 
-.section > h3 {
+.aboutIntroSectionContainer {
+  padding-top: 0;
+}
+
+.aboutSections > h3 {
   color: var(--prpl);
   font-family: var(--header-font);
   font-size: 1.4rem;
   margin: 1rem auto;
   padding: 0.5rem;
   width: 100%;
-}
-
-/* .section class also applied to this container for sake of animating scroll */
-.introSectionContainer {
-  /* height: 395px; */
-  padding-top: 0;
 }
 
 .aboutStatement {
@@ -142,11 +140,30 @@
   align-content: center;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 80%;
   justify-content: flex-start;
   overflow-y: hidden;
-  padding-bottom: 50%;
+  scroll-behavior: smooth;
   width: 100%;
+}
+
+.projectContainerEach {
+  box-sizing: border-box;
+  color: var(--prpl);
+  display: flex;
+  align-content: flex-start;
+  flex-direction: column;
+  flex-flow: wrap;
+  height: 395px;
+  justify-content: center;
+  padding-top: 30%;
+  text-align: center;
+  width: inherit;
+}
+
+.projectsIntroSectionContainer {
+  margin-bottom: 15%;
+  padding-top: 0;
 }
 
 .projectStatement {
@@ -157,16 +174,7 @@
   padding: 1rem;
 }
 
-.projectContainerEach {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 1.5rem;
-  margin-top: 100%;
-}
-
 .projectLogo {
-  margin-top: 0.5rem;
   max-height: 4rem;
 }
 
@@ -174,7 +182,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin: 4% auto;
+  margin: 0 auto;
   width: 100%;
 }
 
@@ -185,16 +193,11 @@
   cursor: pointer;
   font-family: var(--paragraph-font);
   font-size: 1rem;
-  margin: 5px auto;
-  padding: 0.5rem;
+  margin-top: 0.75rem;
+  padding: 5px;
   text-align: center;
-  width: fit-content;
+  width: 25%;
 }
-
-/* .projectScreenCap{
-    width: 90%;
-    padding: .75rem;
-} */
 
 .projectDescription {
   color: var(--prpl);
@@ -202,7 +205,13 @@
   font-family: var(--paragraph-font);
 }
 
+.ProjectPreviewImg {
+  margin: 1rem;
+  width: 100%;
+}
+
 .projectTech {
+  background-color: var(--lt-blu);
   border: 1px dashed var(--prpl);
   color: var(--prpl);
   display: flex;
@@ -214,7 +223,7 @@
   justify-content: center;
   margin: 0 auto;
   padding: 0.5rem;
-  width: 75%;
+  width: 50%;
 }
 
 /* 'contact' modal====================================================== */
