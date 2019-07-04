@@ -207,7 +207,7 @@
   font-family: var(--paragraph-font);
 }
 
-.ProjectPreviewImg {
+.projectPreviewImg {
   margin: 1rem;
   width: 85%;
 }
@@ -245,6 +245,7 @@
   justify-content: space-evenly;
   margin: 1rem auto;
   margin-top: 2rem;
+  width: 100%;
 }
 
 .linkContainer > a {

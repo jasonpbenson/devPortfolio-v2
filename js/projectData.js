@@ -131,7 +131,7 @@ const showProjectsContent = (function(data) {
     let projectPreviewContainer = document.createElement("div");
     projectPreviewContainer.classList.add("projectPreviewContainer");
     let projectPreview = document.createElement("img");
-    projectPreview.classList.add("ProjectPreviewImg");
+    projectPreview.classList.add("projectPreviewImg");
     projectPreview.setAttribute("src", element.screenCap);
     projectContainerEach.appendChild(projectPreview);
     projectContainerEach.appendChild(projectPreviewContainer);
