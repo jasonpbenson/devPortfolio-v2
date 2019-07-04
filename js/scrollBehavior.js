@@ -1,89 +1,115 @@
 const aboutNavArrow = document.getElementById("aboutNavArrow");
 const projectsNavArrow = document.getElementById("projectsNavArrow");
 
-// scroll animation for 'about' section*
+// would like to eventually refactor
+// and consolidate to one function
+
+// scroll handler for 'about' section*
 function aboutScrollHandler() {
-  let aboutScrollPosition = 0;
-  //   console.log("initial about scroll value: " + aboutScrollPosition);
+  let scrollPosition = 0;
+  const handler = function() {
+    anime({
+      targets: ".navArrow",
+      direction: "alternate",
+      duration: 50,
+      easing: "easeInOutCirc",
+      scale: 0.5
+    });
+    if (scrollPosition == 1) {
+      document.querySelector(".frontEndSec").scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+    if (scrollPosition == 2) {
+      document.querySelector(".backEndSec").scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+    if (scrollPosition == 3) {
+      document.querySelector(".serverDbSec").scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+    if (scrollPosition == 4) {
+      document.querySelector(".etAlSec").scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+    if (scrollPosition == 5) {
+      anime({
+        targets: ".navArrow",
+        rotate: "180deg"
+      });
+    }
+    if (scrollPosition > 5) {
+      document.querySelector(".aboutIntroSectionContainer").scrollIntoView({
+        behavior: "smooth"
+      });
+      anime({
+        targets: ".navArrow",
+        rotate: "360deg"
+      });
+      scrollPosition = 0;
+    }
+  };
+
+  // add click handler to nav element
+  // on click advance counter and run handler function
   aboutNavArrow.addEventListener("click", function scroller(e) {
-    aboutScrollPosition++;
-    // console.log("current about scroll value: " + aboutScrollPosition);
-    if (aboutScrollPosition <= 4) {
-      // scroll sections
-      anime({
-        targets: ".aboutSections",
-        translateY: [
-          {
-            value: "-=100%"
-          }
-        ]
-      });
-    }
-    if (aboutScrollPosition == 5) {
-      anime({
-        targets: "#aboutNavArrow",
-        rotate: "180deg"
-      });
-    }
-    if (aboutScrollPosition > 5) {
-      anime({
-        targets: ".aboutSections",
-        translateY: [
-          {
-            value: "+=400%"
-          }
-        ]
-      });
-      anime({
-        targets: "#aboutNavArrow",
-        rotate: "360deg"
-      });
-      aboutScrollPosition = 0;
-    }
+    scrollPosition++;
+    handler();
   });
 }
 
-// scroll animation for 'projects' section*
+// scroll handler for 'projects' section*
 function projectsScrollHandler() {
-  let projectsScrollPosition = 0;
-  //   console.log("initial projects scroll value: " + projectsScrollPosition);
-  projectsNavArrow.addEventListener("click", function scroller() {
-    // console.log("current project scroll value: " + projectsScrollPosition);
-    projectsScrollPosition += 1;
-    if (projectsScrollPosition <= 3) {
-      anime({
-        targets: ".projectSections",
-        translateY: [
-          {
-            value: "-=100%"
-          }
-        ]
+  let scrollPosition = 0;
+  const handler = function() {
+    anime({
+      targets: ".navArrow",
+      direction: "alternate",
+      duration: 50,
+      easing: "easeInOutCirc",
+      scale: 0.5
+    });
+    if (scrollPosition == 1) {
+      document.querySelector(".enchantedLifeGoods").scrollIntoView({
+        behavior: "smooth"
       });
     }
-    if (projectsScrollPosition == 4) {
+    if (scrollPosition == 2) {
+      document.querySelector(".emoceans").scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+    if (scrollPosition == 3) {
+      document.querySelector(".pithos").scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+    if (scrollPosition == 4) {
       anime({
         targets: "#projectsNavArrow",
         rotate: "180deg"
       });
     }
-    if (projectsScrollPosition > 4) {
-      anime({
-        targets: ".projectSections",
-        translateY: [
-          {
-            value: "+=300%"
-          }
-        ]
+    if (scrollPosition > 4) {
+      document.querySelector(".projectsIntroSectionContainer").scrollIntoView({
+        behavior: "smooth"
       });
       anime({
         targets: "#projectsNavArrow",
         rotate: "360deg"
       });
-      projectsScrollPosition = 0;
-      //   console.log("current project scroll value: " + projectsScrollPosition);
+      scrollPosition = 0;
     }
+  };
+  // add click handler to nav element
+  // on click advance counter and run handler function
+  projectsNavArrow.addEventListener("click", function scroller() {
+    console.log("starting count: " + scrollPosition);
+    scrollPosition++;
+    handler();
+    console.log("ending count: " + scrollPosition);
   });
 }
-
-// *would like to consolidate into single function, but I'm not sure that
-// would be practical or possible with the animejs library

@@ -1,6 +1,6 @@
 .modal {
   animation: fadeIn, expandIn 2s;
-  background-image: linear-gradient(#afcfde 82%, #afcfde00);
+  background-image: linear-gradient(#afcfde 70%, #afcfde00);
   border-radius: 15px;
   box-sizing: border-box;
   height: 74%;
@@ -27,10 +27,13 @@
 /* navigation arrows========================================================================== */
 
 .navArrow {
-  left: 75%;
-  position: fixed;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px var(--prpl);
   height: 10%;
-  top: 72%;
+  left: 76%;
+  padding: 5px 3px;
+  position: fixed;
+  top: 25%;
   z-index: 600;
 }
 
@@ -69,11 +72,24 @@
   align-content: center;
   display: flex;
   flex-direction: column;
-  height: 80%;
+  height: 100%;
   justify-content: flex-start;
   overflow-y: hidden;
+  margin-bottom: 100%;
   scroll-behavior: smooth;
   width: 100%;
+}
+
+.aboutIntroSectionContainer {
+  padding-top: 0;
+}
+
+.aboutStatement {
+  color: var(--prpl);
+  font-family: var(--paragraph-font);
+  font-size: 1rem;
+  margin: 1rem auto;
+  padding: 1rem;
 }
 
 .aboutSections {
@@ -83,15 +99,11 @@
   align-content: flex-start;
   flex-direction: column;
   flex-flow: wrap;
-  height: 395px;
   justify-content: center;
-  padding-top: 30%;
+  margin-top: 100%;
+  padding-top: 5%;
   text-align: center;
   width: inherit;
-}
-
-.aboutIntroSectionContainer {
-  padding-top: 0;
 }
 
 .aboutSections > h3 {
@@ -103,20 +115,13 @@
   width: 100%;
 }
 
-.aboutStatement {
-  color: var(--prpl);
-  font-family: var(--paragraph-font);
-  font-size: 1rem;
-  margin: 1rem auto;
-  padding: 1rem;
-}
-
 .aboutTechContainer {
   color: var(--prpl);
   display: flex;
   flex-direction: column;
   flex-flow: wrap;
   justify-content: center;
+  margin-top: 100%;
   text-align: center;
   width: 100%;
 }
@@ -136,34 +141,16 @@
 }
 
 /* 'projects' modal ======================================================================== */
-.projectsContainerAll {
+.projectsContainer {
   align-content: center;
   display: flex;
   flex-direction: column;
-  height: 80%;
+  height: 100%;
   justify-content: flex-start;
   overflow-y: hidden;
+  margin-bottom: 100%;
   scroll-behavior: smooth;
   width: 100%;
-}
-
-.projectContainerEach {
-  box-sizing: border-box;
-  color: var(--prpl);
-  display: flex;
-  align-content: flex-start;
-  flex-direction: column;
-  flex-flow: wrap;
-  height: 395px;
-  justify-content: center;
-  padding-top: 30%;
-  text-align: center;
-  width: inherit;
-}
-
-.projectsIntroSectionContainer {
-  margin-bottom: 15%;
-  padding-top: 0;
 }
 
 .projectStatement {
@@ -172,6 +159,21 @@
   font-size: 1rem;
   margin: 1rem auto;
   padding: 1rem;
+}
+
+.projectContainerEach {
+  align-content: flex-start;
+  box-sizing: border-box;
+  color: var(--prpl);
+  display: flex;
+  flex-direction: column;
+  flex-flow: wrap;
+  height: 100%;
+  justify-content: center;
+  margin-top: 100%;
+  padding-top: 5%;
+  text-align: center;
+  width: inherit;
 }
 
 .projectLogo {
@@ -207,7 +209,7 @@
 
 .ProjectPreviewImg {
   margin: 1rem;
-  width: 100%;
+  width: 85%;
 }
 
 .projectTech {

@@ -1,274 +1,331 @@
-/* /* 
-/* queries for mainStyles======================================== */
+/* queries for mainStyles=================================================== */
 
-@media all and (max-width: 320px){
-    .header{
-        margin: 1.5rem auto 0 auto;
-    }
-    .header > h2{
-        font-size: 1.2rem;
-    }
-    .container--menu{
-        top: 22%;
-    }
-    .menu--selector{
-        margin: 0 .2rem;
-        font-size: 1rem;
-    }
-    .container--svg{
-        top: .6rem;
-        transform: scale(.9);
-    }
+/* mobile=================================================================== */
+@media all and (max-width: 320px) {
+  .container--svg {
+    padding-bottom: 75%;
+  }
+  .main--svg {
+    transform: scale(0.7);
+  }
+}
+@media all and (min-height: 736px) {
+  .container--menu {
+    top: 14%;
+  }
+}
+@media all and (min-height: 812px) {
+  .header > h1 {
+    font-size: 2rem;
+  }
+  .menu--selector {
+    font-size: 1.5rem;
+  }
 }
 
-@media all and (min-width: 980px){
-    .header{
-        justify-content: flex-start;
-        margin-left: 8%;
-        margin-top: 4%;
-        width: 18%;
-    }
-
-    .header:hover{
-        /* background-color: var(--gld);
-        color: var(--orng); */
-        filter: invert(1);
-    }
-
-    .container--menu{
-        flex-direction: column;
-        left: 8%;
-        top: 53%;
-        width: 18%;
-    }
-
-    .menu--selector:hover{
-        /* background-color: var(--gld);
-        color: var(--orng); */
-        filter: invert(1);
-    }
-
-    .menu--selector:active{
-        box-shadow: inset 0 0 5px var(--drk-grn);
-    } 
-
-    .container--menu > h2{
-        margin: 5px auto;
-    }
-
-    .container--svg{
-        justify-content: flex-end;
-        right: -8%;
-        top: -4rem;
-        transform: scale(1.4);
-        width: 25%;
-    }
+/* tablet portrait========================================================= */
+@media all and (min-height: 1024px) and (min-width: 768px) {
+  .header {
+    margin: 1.5rem auto 0;
+  }
+  .header > h1 {
+    font-size: 2.5rem;
+  }
+  .header > p {
+    font-size: 2rem;
+  }
+  .main--svg {
+    margin-top: 5%;
+    transform: scale(1.4);
+  }
+  .container--menu {
+    top: 90%;
+  }
+  .menu--selector {
+    font-size: 2rem;
+    width: 10rem;
+  }
 }
 
-@media all and (min-height: 736px){
-    .header{
-        position: relative;
-        top: -4%;
-    }
-    .header > h2{
-        font-size: 1.8rem;
-    }
-    .header > p{
-        font-size: 1.5rem;
-    }
-    .container--svg{
-        margin-top: 5%;
-        transform: scale(1.2);
-    }
+/* tablet landscape========================================================= */
+@media all and (min-width: 1024px) and (min-height: 768px) {
+  .container--all {
+    align-items: flex-start;
+  }
+  .header {
+    margin: 10%;
+    width: 16rem;
+  }
+  .header > h1 {
+    font-size: 2rem;
+  }
+  .header > p {
+    font-size: 1.8rem;
+  }
+  .container--svg {
+    align-self: flex-end;
+    padding-right: 15%;
+    width: fit-content;
+  }
+  .main--svg {
+    padding-right: 10%;
+    transform: scale(1.2);
+  }
+  .container--menu {
+    flex-direction: column;
+    left: 10%;
+    top: 50%;
+    width: fit-content;
+  }
+  .menu--selector {
+    box-sizing: border-box;
+    font-size: 2rem;
+    margin: 1rem 0;
+    width: 16rem;
+  }
 }
 
-@media all and (min-height: 1024px){
-    .header{
-        padding: 2%;
-        position: relative;
-        top: -20%;
-    }
-    .header > h2{
-        font-size: 2.5rem;
-    }
-    .header > p{
-        font-size: 2rem;
-    }
-    .container--menu{
-       top: 15%;
-    }
-    .menu--selector{
-        font-size: 2.5rem;
-        padding: 1rem;
-        width: 10rem;
-    }
-    .container--svg{
-        margin-top: -8%;
-        transform: scale(1.6);
-        margin-right: 30%;
-    }
+/* desktop================================================================== */
+@media all and (min-width: 980px) {
 }
 
-/* queries for modalStyles======================================= */
-@media all and (max-width: 320px){
-    .modal{
-        height: 16.3rem;
-        left: -12.85rem;
-        padding: 40px 15px;
-        top: -15.6rem;
-    }
+/* queries for modalStyles================================================== */
 
-    .contentIcon{
-        width: 22%;
-    }
-
-    /* about modal */
-    .briefStatement{
-        margin: .5rem 8%;
-    }
-
-    /* projects modal */
-    .projectLogo{
-        max-height: 2.5rem;
-    }
-    .projectDescription{
-        margin: 0 8%;
-        margin-bottom: 8%;
-    }
-
-    /* contact modal */
-    .contactContainer p{
-        margin: .2% auto;
-        font-size: 14px;
-    }
-    .linkContainer{
-        margin: 1rem auto;
-        /* margin-top: 1rem; */
-    }
-    .linkContainer a{
-        font-size: 14px;
-        margin: 0 1%;
-    }
+/* mobile=================================================================== */
+@media all and (max-width: 320px) {
+  .navArrow {
+    left: 79%;
+    height: 8%;
+    top: 25%;
+  }
+  .projectContainerEach {
+    padding-top: 5%;
+  }
+  .projectTech {
+    font-size: 0.7rem;
+  }
 }
 
-@media all and (min-width: 980px){
-    .modal{
-        height: 25rem;
-        padding: 7% 2%;
-        width: 25rem;
-    }
-    .contentIcon{
-        width: 17%;
-    }
-
-    /* about modal */
-    .briefStatement{
-        font-size: 1.2rem;
-    }
-    .section > h3{
-        font-size: 1.75rem;
-    }
-    .techIcon{
-        font-size: 2.5rem;
-    }
-    /* projects modal */
-    .projectLogo{
-        max-height: 6rem;
-    }
-    .projectLinks > a{
-        font-size: 1.5rem;
-        padding: .5rem;
-    }
-    .projectLinks > a:hover{
-        color: var(--orng);
-        border: 1px solid var(--gld);
-    }
-
-    /* contact modal */
-    .linkContainer > a{
-        font-size: 1.5rem;
-        padding: .5rem;
-    }
-    .linkContainer > a:hover{
-        color: var(--orng);
-        border: 1px solid var(--gld);
-    }
-    .contactContainer > p{
-        font-size: 1.2rem;
-    }
+@media all and (min-height: 736px) {
+  .modal {
+    background-image: linear-gradient(#afcfde 64%, #afcfde00);
+  }
+  .navArrow {
+    height: 8%;
+    left: 76%;
+  }
+  .projectContainerEach {
+    padding-top: 15%;
+  }
+  .projectStatement {
+    font-size: 1.3rem;
+  }
+  .projectLogo {
+    max-height: 4rem;
+  }
+  .projectPreviewImg {
+    width: 75%;
+  }
+  .projectTech {
+    font-size: 1rem;
+  }
 }
 
-@media all and (min-height: 736px){
-    .modal{
-        height: 21.25rem;
-        width: 21.25rem;
-    }
-    /* about modal */
-    .briefStatement{
-        font-size: 1.5rem;
-    }
-    .section > h3{
-        font-size: 1.8rem;
-    }
-    .techIcon{
-        font-size: 2.5rem;
-        width: fit-content;
-    }
-    /* contact modal */
-    .linkContainer > a{
-        font-size: 1.5rem;
-        width: fit-content;
-    }
-    .contactContainer > p{
-        font-size: 1.5rem;
-    }
+@media all and (min-height: 812px) {
+  .aboutSections {
+    padding-top: 44%;
+  }
+  .aboutIntroSectionContainer {
+    padding-top: 0;
+  }
+  .projectContainerEach {
+    padding-top: 15%;
+  }
+  .projectPreviewImg {
+    width: 85%;
+  }
 }
 
-@media all and (min-height: 1024px){
-    .modal{
-        height: 46%;
-        padding: 10% 0;
-        padding-right: 2%; /* to correct weird issue with modal appearing off-center... */
-        width: 60%;
-    }
-    
-    /* about modal */
-    .briefStatement{
-        font-size: 1.5rem;
-    }
-    .section > h3{
-        font-size: 2rem;
-    }
-    .techIcon{
-        font-size: 3rem;
-    }
+/* tablet portrait========================================================= */
 
-    /* projects modal */
-    .projectLogo{
-        max-height: 8rem;
-    }
-    .projectLinks > a{
-        font-size: 2rem;
-        padding: .5rem;
-    }
-    .projectDescription{
-        font-size: 1.5rem;
-    }
-    .projectTech{
-        font-size: 1.25rem;
-        padding: 1rem;
-    }
-    
-    /* contact container */
-    .linkContainer{
-        margin-top: 3rem;
-    }
-    .linkContainer > a{
-        font-size: 2rem;
-        padding: .5rem;
-    }
-    .contactContainer > p{
-        font-size: 1.75rem;
-    }
+@media all and (min-height: 1024px) and (min-width: 768px) {
+  .modal {
+    background-image: linear-gradient(#afcfde 70%, #afcfde00);
+    height: 70%;
+    left: 7.5%;
+    top: 18%;
+    width: 85%;
+  }
+  .navArrow {
+    height: 10%;
+    left: 76%;
+    top: 20%;
+  }
+  .contentIcon {
+    width: 15%;
+  }
+
+  /* 'about' section======================================================== */
+
+  .aboutStatement {
+    font-size: 2rem;
+  }
+  .aboutSections {
+    font-size: 2.5rem;
+    padding-top: 30%;
+  }
+  .aboutSections > h3 {
+    font-size: 2.4rem;
+  }
+  .aboutIntroSectionContainer {
+    padding-top: 0;
+  }
+  .techIcon {
+    font-size: 4rem;
+  }
+
+  /* 'projects' section===================================================== */
+
+  .projectContainerEach {
+    padding-top: 15%;
+  }
+  .projectsIntroSectionContainer {
+    margin-bottom: 25%;
+    padding-bottom: 0;
+  }
+  .projectStatement {
+    font-size: 2rem;
+  }
+  .projectLogo {
+    max-height: 7rem;
+  }
+  .projectLinks {
+    justify-content: space-evenly;
+  }
+  .projectLinks > a {
+    font-size: 2rem;
+    width: 15%;
+  }
+  .projectPreviewImg {
+    width: 55%;
+  }
+  .projectTech {
+    font-size: 1.2rem;
+  }
+
+  /* contact section======================================================= */
+  .linkContainer > a {
+    font-size: 2rem;
+    width: 36%;
+  }
+  .contactContainer > p {
+    font-size: 2rem;
+  }
 }
 
+/* tablet landscape========================================================= */
+@media all and (min-width: 1024px) and (min-height: 768px) {
+  .modal {
+    background-image: linear-gradient(#afcfde 74%, #afcfde00);
+    height: 84%;
+    left: 43%;
+    top: 10%;
+    width: 42%;
+  }
+  .navArrow {
+    height: 10%;
+    left: 74%;
+    top: 13%;
+  }
+  /* 'about' section======================================================== */
+
+  .aboutStatement {
+    font-size: 1.8rem;
+  }
+  .aboutSections {
+    font-size: 2.5rem;
+    padding-top: 30%;
+  }
+  .aboutSections > h3 {
+    font-size: 2.4rem;
+  }
+  .aboutIntroSectionContainer {
+    padding-top: 0;
+  }
+  .techIcon {
+    font-size: 4rem;
+  }
+
+  /* 'projects' section===================================================== */
+
+  .projectStatement {
+    font-size: 1.8rem;
+  }
+  .projectContainerEach {
+    padding-top: 34%;
+  }
+  .projectLogo {
+    max-height: 6rem;
+  }
+  .projectLinks > a {
+    width: 25%;
+  }
+  .projectPreviewImg {
+    width: 95%;
+  }
+  .projectTech {
+    box-sizing: border-box;
+    width: 95%;
+  }
+  /* contact section======================================================= */
+  .linkContainer > a {
+    font-size: 1.8rem;
+    width: 33%;
+  }
+  .contactContainer > p {
+    font-size: 1.8rem;
+  }
+}
+
+/* desktop================================================================== */
+@media all and (min-width: 500px) {
+  .modal {
+    background-image: linear-gradient(#afcfde 75%, #afcfde00);
+  }
+  .contentIcon {
+    width: 15%;
+  }
+  /* 'about' section======================================================== */
+  .aboutStatement {
+    font-size: 1.5rem;
+  }
+  .techIcon {
+    font-size: 3.5rem;
+  }
+
+  /* 'projects' section===================================================== */
+  .projectStatement {
+    font-size: 1.5rem;
+  }
+  .projectLogo {
+    max-height: 5rem;
+  }
+  .projectLinks > a {
+    font-size: 1.5rem;
+  }
+  .projectTech {
+    font-size: 1.2rem;
+  }
+  /* contact section======================================================= */
+  /* 'projects' section===================================================== */
+
+  /* contact section======================================================= */
+}
+
+@media all and (min-width: 980px) {
+  /* 'about' section======================================================== */
+
+  /* 'projects' section===================================================== */
+
+  /* contact section======================================================= */
+}

@@ -13,7 +13,7 @@ aboutSelector.addEventListener("click", e => {
     targets: "#flower--petals2",
     delay: 500,
     easing: "spring(1, 80, 10, 0)",
-    fill: "#264c3a",
+    fill: "#358f6e",
     scale: 1.5,
     translateX: 19,
     translateY: -80
@@ -79,7 +79,7 @@ projectSelector.addEventListener("click", e => {
     targets: "#flower--petals1",
     delay: 500,
     easing: "spring(1, 80, 10, 0)",
-    fill: "#264c3a",
+    fill: "#358f6e",
     scale: 1.5,
     translateX: -84,
     translateY: -80
@@ -146,7 +146,7 @@ contactSelector.addEventListener("click", e => {
     targets: "#flower--petals3",
     delay: 500,
     easing: "spring(1, 100, 10, 1)",
-    fill: "#264c3a",
+    fill: "#358f6e",
     scale: 1.5,
     translateX: -182,
     translateY: -80
