@@ -47,44 +47,6 @@
   }
 }
 
-/* tablet landscape========================================================= */
-@media all and (min-width: 1024px) and (min-height: 768px) {
-  .container--all {
-    align-items: flex-start;
-  }
-  .header {
-    margin: 10%;
-    width: 16rem;
-  }
-  .header > h1 {
-    font-size: 2rem;
-  }
-  .header > p {
-    font-size: 1.8rem;
-  }
-  .container--svg {
-    align-self: flex-end;
-    padding-right: 15%;
-    width: fit-content;
-  }
-  .main--svg {
-    padding-right: 10%;
-    transform: scale(1.2);
-  }
-  .container--menu {
-    flex-direction: column;
-    left: 10%;
-    top: 50%;
-    width: fit-content;
-  }
-  .menu--selector {
-    box-sizing: border-box;
-    font-size: 2rem;
-    margin: 1rem 0;
-    width: 16rem;
-  }
-}
-
 /* desktop================================================================== */
 @media all and (min-width: 500px) {
 }
@@ -138,6 +100,10 @@
   .projectContainerEach {
     padding-top: 5%;
   }
+  .projectPreviewImg {
+    height: 130px;
+    width: auto;
+  }
   .projectTech {
     font-size: 0.7rem;
   }
@@ -160,9 +126,6 @@
   .projectLogo {
     max-height: 4rem;
   }
-  .projectPreviewImg {
-    width: 75%;
-  }
   .projectTech {
     font-size: 1rem;
   }
@@ -177,9 +140,6 @@
   }
   .projectContainerEach {
     padding-top: 15%;
-  }
-  .projectPreviewImg {
-    width: 85%;
   }
 }
 
@@ -244,7 +204,7 @@
     width: 15%;
   }
   .projectPreviewImg {
-    width: 55%;
+    height: 225px;
   }
   .projectTech {
     font-size: 1.2rem;
@@ -257,70 +217,6 @@
   }
   .contactContainer > p {
     font-size: 2rem;
-  }
-}
-
-/* tablet landscape========================================================= */
-@media all and (min-width: 1024px) and (min-height: 768px) {
-  .modal {
-    background-image: linear-gradient(#afcfde 74%, #afcfde00);
-    height: 84%;
-    left: 43%;
-    top: 10%;
-    width: 42%;
-  }
-  .navArrow {
-    height: 10%;
-    left: 74%;
-    top: 13%;
-  }
-  /* 'about' section======================================================== */
-
-  .aboutStatement {
-    font-size: 1.8rem;
-  }
-  .aboutSections {
-    font-size: 2.5rem;
-    padding-top: 30%;
-  }
-  .aboutSections > h3 {
-    font-size: 2.4rem;
-  }
-  .aboutIntroSectionContainer {
-    padding-top: 0;
-  }
-  .techIcon {
-    font-size: 4rem;
-  }
-
-  /* 'projects' section===================================================== */
-
-  .projectStatement {
-    font-size: 1.8rem;
-  }
-  .projectContainerEach {
-    padding-top: 34%;
-  }
-  .projectLogo {
-    max-height: 6rem;
-  }
-  .projectLinks > a {
-    width: 25%;
-  }
-  .projectPreviewImg {
-    width: 95%;
-  }
-  .projectTech {
-    box-sizing: border-box;
-    width: 95%;
-  }
-  /* contact section======================================================= */
-  .linkContainer > a {
-    font-size: 1.8rem;
-    width: 33%;
-  }
-  .contactContainer > p {
-    font-size: 1.8rem;
   }
 }
 
@@ -353,7 +249,7 @@
     font-size: 1.5rem;
   }
   .projectPreviewImg {
-    width: 75%;
+    height: 200px;
   }
   .projectTech {
     font-size: 1.2rem;
@@ -405,7 +301,7 @@
     font-size: 1.5rem;
   }
   .projectContainerEach {
-    padding-top: 30%;
+    padding-top: 25%;
   }
   .projectLogo {
     max-height: 4.5rem;
@@ -415,7 +311,7 @@
     width: 20%;
   }
   .projectPreviewImg {
-    width: 80%;
+    height: 180px;
   }
   .projectTech {
     box-sizing: border-box;
