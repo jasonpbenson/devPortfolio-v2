@@ -59,6 +59,7 @@ a:focus {
 }
 
 .container--content {
+  overflow: hidden;
   width: 100%;
 }
 

@@ -57,9 +57,14 @@ contentModal.appendChild(aboutContent);
 
 //create aboutContent child elements and populate with data
 const showAboutContent = (function(data) {
+  //create element for nav sonar effect
+  let navSonar = document.createElement("div");
+  navSonar.classList.add("sonarWave");
+  aboutContent.appendChild(navSonar);
+
   //create nav button
   let aboutNavButton = document.createElement("img");
-  aboutNavButton.setAttribute("src", "assets/svg/down-arrow_variant.svg");
+  aboutNavButton.setAttribute("src", "assets/svg/down-arrow_v2.svg");
   aboutNavButton.setAttribute("id", "aboutNavArrow");
   aboutNavButton.classList.add("navArrow");
   aboutContent.appendChild(aboutNavButton);
@@ -69,10 +74,10 @@ const showAboutContent = (function(data) {
   aboutIntroSectionContainer.classList.add("aboutIntroSectionContainer");
 
   // create element for about icon
-  let aboutIcon = document.createElement("img");
-  aboutIcon.classList.add("contentIcon");
-  aboutIcon.setAttribute("src", "assets/svg/about_variant.svg");
-  aboutIntroSectionContainer.appendChild(aboutIcon);
+  // let aboutIcon = document.createElement("img");
+  // aboutIcon.classList.add("contentIcon");
+  // aboutIcon.setAttribute("src", "assets/svg/about_variant.svg");
+  // aboutIntroSectionContainer.appendChild(aboutIcon);
 
   //create element for text blurb
   let aboutText = document.createElement("p");

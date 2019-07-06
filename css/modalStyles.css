@@ -1,9 +1,9 @@
 .modal {
   animation: fadeIn, expandIn 2s;
-  background-image: linear-gradient(#afcfde 70%, #afcfde00);
+  background-image: linear-gradient(#afcfde 90%, #afcfde00);
   border-radius: 15px;
   box-sizing: border-box;
-  height: 74%;
+  height: 73.19%;
   left: 2.5%;
   overflow: hidden;
   padding: 0 5%;
@@ -24,16 +24,42 @@
   }
 }
 
+/* sonar efect for navigation arrows */
+.sonarWave {
+  animation: sonarWave 2s linear infinite;
+  border-radius: 50%;
+  height: 70px;
+  left: calc(50% - 35px);
+  position: fixed;
+  top: 83%;
+  width: 70px;
+  z-index: 600;
+}
+
+@keyframes sonarWave {
+  from {
+    background: var(--prpl);
+    opacity: 1;
+  }
+  to {
+    background: var(--orng);
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
 /* navigation arrows========================================================================== */
 
 .navArrow {
+  background-color: var(--lt-blu);
   border-radius: 50%;
   box-shadow: 0px 0px 5px var(--prpl);
-  height: 10%;
-  left: 76%;
-  padding: 5px 3px;
+  cursor: pointer;
+  height: 70px;
+  left: calc(50% - 35px);
   position: fixed;
-  top: 25%;
+  top: 83%;
+  width: 70px;
   z-index: 600;
 }
 
@@ -89,7 +115,7 @@
   font-family: var(--paragraph-font);
   font-size: 1rem;
   margin: 1rem auto;
-  padding: 1rem;
+  padding: 6rem 1rem;
 }
 
 .aboutSections {
@@ -100,8 +126,8 @@
   flex-direction: column;
   flex-flow: wrap;
   justify-content: center;
-  margin-top: 100%;
-  padding-top: 5%;
+  margin: 100% auto;
+  padding-top: 8%;
   text-align: center;
   width: inherit;
 }
@@ -159,7 +185,7 @@
   font-family: var(--paragraph-font);
   font-size: 1rem;
   margin: 1rem auto;
-  padding: 1rem;
+  padding: 6rem 1rem;
 }
 
 .projectContainerEach {

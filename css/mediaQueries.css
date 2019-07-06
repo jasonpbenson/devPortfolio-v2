@@ -23,32 +23,30 @@
   }
 }
 
-/* tablet portrait========================================================= */
-@media all and (min-height: 1024px) and (min-width: 768px) {
+/* desktop=============================================================================*/
+@media all and (min-width: 500px) {
   .header {
     margin: 1.5rem auto 0;
   }
   .header > h1 {
-    font-size: 2.5rem;
-  }
-  .header > p {
     font-size: 2rem;
   }
+  .header > p {
+    font-size: 1.5rem;
+  }
+  .container--svg {
+    top: 18%;
+  }
   .main--svg {
-    margin-top: 5%;
-    transform: scale(1.4);
+    transform: scale(0.8);
   }
   .container--menu {
     top: 90%;
   }
   .menu--selector {
-    font-size: 2rem;
-    width: 10rem;
+    font-size: 1.5rem;
+    width: 8rem;
   }
-}
-
-/* desktop================================================================== */
-@media all and (min-width: 500px) {
 }
 
 @media all and (min-width: 900px) {
@@ -71,9 +69,9 @@
     padding-bottom: 40%;
     width: 42%;
   }
-  /* .main--svg {
-    padding-right: 25%;
-  } */
+  .main--svg {
+    transform: scale(1);
+  }
   .container--menu {
     flex-direction: column;
     left: 10%;
@@ -92,10 +90,17 @@
 
 /* mobile=================================================================== */
 @media all and (max-width: 320px) {
+  .sonarWave {
+    left: calc(50% - 25px);
+    height: 50px;
+    top: 86%;
+    width: 50px;
+  }
   .navArrow {
-    left: 79%;
-    height: 8%;
-    top: 25%;
+    left: calc(50% - 25px);
+    height: 50px;
+    top: 86%;
+    width: 50px;
   }
   .projectContainerEach {
     padding-top: 5%;
@@ -110,13 +115,6 @@
 }
 
 @media all and (min-height: 736px) {
-  .modal {
-    background-image: linear-gradient(#afcfde 64%, #afcfde00);
-  }
-  .navArrow {
-    height: 8%;
-    left: 76%;
-  }
   .projectContainerEach {
     padding-top: 15%;
   }
@@ -132,6 +130,18 @@
 }
 
 @media all and (min-height: 812px) {
+  .sonarWave {
+    left: calc(50% - 40px);
+    height: 80px;
+    top: 80%;
+    width: 80px;
+  }
+  .navArrow {
+    left: calc(50% - 40px);
+    height: 80px;
+    top: 80%;
+    width: 80px;
+  }
   .aboutSections {
     padding-top: 44%;
   }
@@ -143,92 +153,26 @@
   }
 }
 
-/* tablet portrait========================================================= */
-
-@media all and (min-height: 1024px) and (min-width: 768px) {
+/* desktop===================================================================== */
+@media all and (min-width: 500px) {
   .modal {
-    background-image: linear-gradient(#afcfde 70%, #afcfde00);
+    background-image: linear-gradient(#afcfde 95%, #afcfde00);
     height: 70%;
     left: 7.5%;
     top: 18%;
     width: 85%;
   }
-  .navArrow {
-    height: 10%;
-    left: 76%;
+  .sonarWave {
+    height: 80px;
+    left: 80%;
     top: 20%;
-  }
-  .contentIcon {
-    width: 15%;
-  }
-
-  /* 'about' section======================================================== */
-
-  .aboutStatement {
-    font-size: 2rem;
-  }
-  .aboutSections {
-    font-size: 2.5rem;
-    padding-top: 30%;
-  }
-  .aboutSections > h3 {
-    font-size: 2.4rem;
-  }
-  .aboutIntroSectionContainer {
-    padding-top: 0;
-  }
-  .techIcon {
-    font-size: 4rem;
-  }
-
-  /* 'projects' section===================================================== */
-
-  .projectContainerEach {
-    padding-top: 15%;
-  }
-  .projectsIntroSectionContainer {
-    margin-bottom: 25%;
-    padding-bottom: 0;
-  }
-  .projectStatement {
-    font-size: 2rem;
-  }
-  .projectLogo {
-    max-height: 7rem;
-  }
-  .projectLinks {
-    justify-content: space-evenly;
-  }
-  .projectLinks > a {
-    font-size: 2rem;
-    width: 15%;
-  }
-  .projectPreviewImg {
-    height: 225px;
-  }
-  .projectTech {
-    font-size: 1.2rem;
-  }
-
-  /* contact section======================================================= */
-  .linkContainer > a {
-    font-size: 2rem;
-    width: 36%;
-  }
-  .contactContainer > p {
-    font-size: 2rem;
-  }
-}
-
-/* desktop================================================================== */
-@media all and (min-width: 500px) {
-  .modal {
-    background-image: linear-gradient(#afcfde 75%, #afcfde00);
-    left: 10%;
-    width: 80%;
+    width: 80px;
   }
   .navArrow {
-    height: 8%;
+    height: 80px;
+    left: 80%;
+    top: 20%;
+    width: 80px;
   }
   .contentIcon {
     width: 15%;
@@ -236,14 +180,34 @@
   /* 'about' section======================================================== */
   .aboutStatement {
     font-size: 1.5rem;
+  }
+  .aboutSections {
+    font-size: 2.5rem;
+    padding-top: 15%;
+  }
+  .aboutSections > h3 {
+    font-size: 2.4rem;
   }
   .techIcon {
     font-size: 3.5rem;
   }
 
   /* 'projects' section===================================================== */
+  .projectsIntroSectionContainer {
+    margin-bottom: 25%;
+    padding-bottom: 0;
+  }
   .projectStatement {
     font-size: 1.5rem;
+  }
+  .projectContainerEach {
+    padding-top: 5%;
+  }
+  .projectLogo {
+    max-height: 4rem;
+  }
+  .projectLinks {
+    justify-content: space-evenly;
   }
   .projectLinks > a {
     font-size: 1.5rem;
@@ -258,6 +222,7 @@
   /* contact section======================================================= */
   .linkContainer > a {
     font-size: 1.5rem;
+    width: 36%;
   }
   .contactContainer > p {
     font-size: 1.5rem;
@@ -266,16 +231,23 @@
 
 @media all and (min-width: 900px) {
   .modal {
-    background-image: linear-gradient(#afcfde 80%, #afcfde00);
+    background-image: linear-gradient(#afcfde 90%, #afcfde00);
     height: 84%;
     left: 47%;
     top: 10%;
     width: 42%;
   }
+  .sonarWave {
+    height: 90px;
+    left: 79%;
+    top: 79%;
+    width: 90px;
+  }
   .navArrow {
-    height: 10%;
-    left: 80%;
-    top: 13%;
+    height: 90px;
+    left: 79%;
+    top: 79%;
+    width: 90px;
   }
   /* 'about' section======================================================== */
 
@@ -301,7 +273,7 @@
     font-size: 1.5rem;
   }
   .projectContainerEach {
-    padding-top: 25%;
+    padding-top: 15%;
   }
   .projectLogo {
     max-height: 4.5rem;

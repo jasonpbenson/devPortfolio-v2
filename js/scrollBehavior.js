@@ -47,6 +47,7 @@ function aboutScrollHandler() {
       });
       anime({
         targets: ".navArrow",
+        delay: 1000,
         rotate: "360deg"
       });
       scrollPosition = 0;
@@ -99,6 +100,7 @@ function projectsScrollHandler() {
       });
       anime({
         targets: "#projectsNavArrow",
+        delay: 1000,
         rotate: "360deg"
       });
       scrollPosition = 0;

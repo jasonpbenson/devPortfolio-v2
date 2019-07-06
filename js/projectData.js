@@ -63,9 +63,14 @@ contentModal.appendChild(projectsContent);
 
 //create projectsContent child elements and populate with data
 const showProjectsContent = (function(data) {
+  //create element for nav sonar effect
+  let navSonar = document.createElement("div");
+  navSonar.classList.add("sonarWave");
+  projectsContent.appendChild(navSonar);
+
   //create nav button
   let projectsNavArrow = document.createElement("img");
-  projectsNavArrow.setAttribute("src", "assets/svg/down-arrow_variant.svg");
+  projectsNavArrow.setAttribute("src", "assets/svg/down-arrow_v2.svg");
   projectsNavArrow.setAttribute("id", "projectsNavArrow");
   projectsNavArrow.classList.add("navArrow");
   projectsContent.appendChild(projectsNavArrow);
@@ -75,10 +80,10 @@ const showProjectsContent = (function(data) {
   projectsIntroSectionContainer.classList.add("projectsIntroSectionContainer");
 
   //create icon
-  let projectsIcon = document.createElement("img");
-  projectsIcon.setAttribute("src", "assets/svg/projects_variant.svg");
-  projectsIcon.classList.add("contentIcon");
-  projectsIntroSectionContainer.appendChild(projectsIcon);
+  // let projectsIcon = document.createElement("img");
+  // projectsIcon.setAttribute("src", "assets/svg/projects_variant.svg");
+  // projectsIcon.classList.add("contentIcon");
+  // projectsIntroSectionContainer.appendChild(projectsIcon);
 
   //create element for text blurb
   let projectText = document.createElement("p");
