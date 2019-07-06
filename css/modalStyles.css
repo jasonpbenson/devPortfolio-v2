@@ -1,6 +1,6 @@
 .modal {
   animation: fadeIn, expandIn 2s;
-  background-image: linear-gradient(#afcfde 90%, #afcfde00);
+  background-image: linear-gradient(#afcfde 95%, #afcfde00);
   border-radius: 15px;
   box-sizing: border-box;
   height: 73.19%;
@@ -29,9 +29,9 @@
   animation: sonarWave 2s linear infinite;
   border-radius: 50%;
   height: 70px;
-  left: calc(50% - 35px);
+  left: 75%;
   position: fixed;
-  top: 83%;
+  top: 75%;
   width: 70px;
   z-index: 600;
 }
@@ -56,9 +56,9 @@
   box-shadow: 0px 0px 5px var(--prpl);
   cursor: pointer;
   height: 70px;
-  left: calc(50% - 35px);
+  left: 75%;
   position: fixed;
-  top: 83%;
+  top: 75%;
   width: 70px;
   z-index: 600;
 }
@@ -237,7 +237,7 @@
 
 .projectPreviewImg {
   margin: 1rem;
-  height: 150px;
+  height: 120px;
   width: auto;
 }
 
