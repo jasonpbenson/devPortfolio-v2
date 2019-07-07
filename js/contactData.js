@@ -61,11 +61,13 @@ contactSelector.addEventListener("click", e => {
     return;
   } else {
     //if not:
-    //reset conentModal so that the transition between conent sets is smooth
-    contentModal.classList.add("displayNone");
-    //hide projects and contact content
-    aboutContent.setAttribute("id", "displayNone");
-    projectsContent.setAttribute("id", "displayNone");
+    //reset conentModal so that the transition between content sets is smooth
+    setTimeout(() => {
+      contentModal.classList.add("displayNone");
+      //hide projects and contact content
+      aboutContent.setAttribute("id", "displayNone");
+      projectsContent.setAttribute("id", "displayNone");
+    }, 1000);
     //display modal and projects content
     setTimeout(function() {
       contentModal.classList.remove("displayNone");

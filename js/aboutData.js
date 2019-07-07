@@ -130,12 +130,13 @@ aboutSelector.addEventListener("click", e => {
     return;
   } else {
     //if not:
-    //reset conentModal so that the transition between conent sets is smooth
-    contentModal.classList.add("displayNone");
-    //hide projects and contact content
-    projectsContent.setAttribute("id", "displayNone");
-    projectsContent.scrollTop = 0;
-    contactContent.setAttribute("id", "displayNone");
+    //reset conentModal so that the transition between content sets is smooth
+    setTimeout(() => {
+      contentModal.classList.add("displayNone");
+      //hide projects and contact content
+      projectsContent.setAttribute("id", "displayNone");
+      contactContent.setAttribute("id", "displayNone");
+    }, 1000);
     //display modal and about content
     setTimeout(function() {
       contentModal.classList.remove("displayNone");

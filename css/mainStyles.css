@@ -10,6 +10,11 @@
   --paragraph-font: "Overlock", cursive;
 }
 
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent; /* For some Androids */
+}
+
 html {
   height: 100vh;
   margin: 0;
