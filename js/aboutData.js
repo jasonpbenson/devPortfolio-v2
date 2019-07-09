@@ -91,9 +91,9 @@ const showAboutContent = (function(data) {
   aboutContent.appendChild(aboutIntroSectionContainer);
 
   //tech icons container
-  let techContainer = document.createElement("div");
-  techContainer.classList.add("aboutTechContainer");
-  aboutContent.appendChild(techContainer);
+  let sectionContainer = document.createElement("div");
+  sectionContainer.classList.add("aboutsectionContainer");
+  aboutContent.appendChild(sectionContainer);
 
   //loop through 'aboutData' and pull section titles and tech icons
   data.forEach(element => {
@@ -104,7 +104,7 @@ const showAboutContent = (function(data) {
     let sectionHeaderText = document.createTextNode(element.sectionTitle);
     aboutSections.appendChild(sectionHeader);
     sectionHeader.appendChild(sectionHeaderText);
-    techContainer.appendChild(aboutSections);
+    sectionContainer.appendChild(aboutSections);
 
     let iconContainer = document.createElement("div");
     iconContainer.classList.add("iconContainer");
@@ -131,12 +131,12 @@ aboutSelector.addEventListener("click", e => {
   } else {
     //if not:
     //reset conentModal so that the transition between content sets is smooth
-    setTimeout(() => {
+    setTimeout(function() {
       contentModal.classList.add("displayNone");
       //hide projects and contact content
       projectsContent.setAttribute("id", "displayNone");
       contactContent.setAttribute("id", "displayNone");
-    }, 1000);
+    });
     //display modal and about content
     setTimeout(function() {
       contentModal.classList.remove("displayNone");

@@ -57,7 +57,7 @@ function aboutScrollHandler() {
   // reset function if another menu item is selected before the sequence resets
   const reset = function() {
     document.querySelector(".aboutIntroSectionContainer").scrollIntoView({
-      behavior: "smooth"
+      behavior: "auto"
     });
     anime({
       targets: ".navArrow",
@@ -134,11 +134,10 @@ function projectsScrollHandler() {
   // reset function if another menu item is selected before the sequence resets
   const reset = function() {
     document.querySelector(".projectsIntroSectionContainer").scrollIntoView({
-      behavior: "smooth"
+      behavior: "auto"
     });
     anime({
       targets: "#projectsNavArrow",
-      delay: 1000,
       rotate: "360deg"
     });
     scrollPosition = 0;

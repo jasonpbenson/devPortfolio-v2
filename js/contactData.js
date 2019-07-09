@@ -67,7 +67,7 @@ contactSelector.addEventListener("click", e => {
       //hide projects and contact content
       aboutContent.setAttribute("id", "displayNone");
       projectsContent.setAttribute("id", "displayNone");
-    }, 1000);
+    });
     //display modal and projects content
     setTimeout(function() {
       contentModal.classList.remove("displayNone");

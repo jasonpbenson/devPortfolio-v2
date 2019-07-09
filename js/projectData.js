@@ -169,12 +169,12 @@ projectSelector.addEventListener("click", e => {
   } else {
     //if not:
     //reset conentModal so that the transition between content sets is smooth
-    setTimeout(() => {
+    setTimeout(function() {
       contentModal.classList.add("displayNone");
       //hide projects and contact content
       aboutContent.setAttribute("id", "displayNone");
       contactContent.setAttribute("id", "displayNone");
-    }, 1000);
+    });
     //display modal and projects content
     setTimeout(function() {
       contentModal.classList.remove("displayNone");
