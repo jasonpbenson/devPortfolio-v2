@@ -1,3 +1,4 @@
+// data for contact section
 let contactInfo = [
   {
     links: [
@@ -22,6 +23,7 @@ const showContactConent = (function(data) {
   let contactIcon = document.createElement("img");
   contactIcon.classList.add("contentIcon");
   contactIcon.setAttribute("src", "assets/svg/contact_variant.svg");
+  contactIcon.setAttribute("alt", "butterfly graphic");
   contactContent.appendChild(contactIcon);
 
   data.forEach(element => {
@@ -31,16 +33,19 @@ const showContactConent = (function(data) {
     contactContent.appendChild(linkContainer);
 
     for (let i = 0; i < element.links.length; i++) {
-      //create a tags and set href
+      //create <button> and nest <a> element for external links
+      let contactLinkButton = document.createElement("button");
       let contactLink = document.createElement("a");
       contactLink.setAttribute("href", element.links[i]);
       contactLink.setAttribute("target", "blank");
-      linkContainer.appendChild(contactLink);
+      contactLinkButton.appendChild(contactLink);
+      linkContainer.appendChild(contactLinkButton);
 
-      //label a tags
+      //create text node from data object and append to <a> element
       let labelText = document.createTextNode(element.titles[i]);
       contactLink.appendChild(labelText);
     }
+    //create <p> for email and phone#
     for (let i = 0; i < element.info.length; i++) {
       let infoText = document.createElement("p");
       let infoTextContent = document.createTextNode(element.info[i]);
@@ -48,12 +53,9 @@ const showContactConent = (function(data) {
       contactContent.appendChild(infoText);
     }
   });
-})(contactInfo);
-
-// ^ iife
+})(contactInfo); // < iife -- runs immediately
 
 // add click listener to the contact selector
-
 contactSelector.addEventListener("click", e => {
   //check to see if already displayed on page
   //if so: do nothing
@@ -62,13 +64,12 @@ contactSelector.addEventListener("click", e => {
   } else {
     //if not:
     //reset conentModal so that the transition between content sets is smooth
-    setTimeout(() => {
-      contentModal.classList.add("displayNone");
-      //hide projects and contact content
-      aboutContent.setAttribute("id", "displayNone");
-      projectsContent.setAttribute("id", "displayNone");
-    });
-    //display modal and projects content
+    contentModal.classList.add("displayNone");
+    //hide any displayed content containers
+    //in this case set attributes for about container and projects container if either happens to be displayed
+    aboutContent.setAttribute("id", "displayNone");
+    projectsContent.setAttribute("id", "displayNone");
+    //display modal and contact container with timeout set to sync with animation
     setTimeout(function() {
       contentModal.classList.remove("displayNone");
       contactContent.removeAttribute("id", "displayNone");

@@ -5,10 +5,12 @@ let builtWith = "built with: ";
 let projects = [
   {
     logo: `${logoPath}enchanted_splatter_OffRegTrace_ed_variant.svg`,
+    logoAlt: `enchanted life goods project logo`,
     title: "enchantedLifeGoods",
     repoLink: "https://github.com/jasonpbenson/enchantedLifeGoods",
     demoLink: null,
     screenCap: `${screenCapPath}elg_screen1.png`,
+    screenCapAlt: "enchanted life goods project preview image",
     description: `Enchanted Life Goods is a website for a small business that I run with my 
                        wife (we primarily make and sell functional ceramics). It’s a work in progress, 
                         but hoping to have a working demo available soon.`,
@@ -23,10 +25,12 @@ let projects = [
   },
   {
     logo: `${logoPath}/emOceans-logo-1_variant.svg`,
+    logoAlt: `emoceans project logo`,
     title: "emoceans",
     repoLink: "https://github.com/jasonpbenson/backEndProject",
     demoLink: "https://emoceans.jpbenson.com",
     screenCap: `${screenCapPath}emOceans_screen2.png`,
+    screenCapAlt: "enchanted life goods project preview image",
     description: `emOceans is a simple web application that allows you to take note of your mood 
                         every day using color and language. Each day (and each mood, each memory) forms 
                         a tiny drop in the vast and ever-shifting ocean that is every human. We hope to 
@@ -43,10 +47,12 @@ let projects = [
   },
   {
     logo: `${logoPath}/pithos-logo-1_variant.svg`,
+    logoAlt: `pithos project logo`,
     title: "pithos",
     repoLink: "https://github.com/jasonpbenson/FrontEndProject-Pithos",
     demoLink: "https://pithos.jpbenson.com",
     screenCap: `${screenCapPath}pithos_screen1.png`,
+    screenCapAlt: "enchanted life goods project preview image",
     description: `Pithos is a space that allows the user to experience an 'ordinary' 
                     thing in an unusual way. We were interested in ecosystems, and wanted to connect our 
                     ecosystem to the state of Georgia (home), and also the larger realms of history, mythology, 
@@ -69,21 +75,18 @@ const showProjectsContent = (function(data) {
   projectsContent.appendChild(navSonar);
 
   //create nav button
+  let projectsNavArrowButton = document.createElement("button");
   let projectsNavArrow = document.createElement("img");
   projectsNavArrow.setAttribute("src", "assets/svg/down-arrow_v2.svg");
   projectsNavArrow.setAttribute("id", "projectsNavArrow");
+  projectsNavArrow.setAttribute("alt", "navigation arrow graphic");
   projectsNavArrow.classList.add("navArrow");
-  projectsContent.appendChild(projectsNavArrow);
+  projectsNavArrowButton.appendChild(projectsNavArrow);
+  projectsContent.appendChild(projectsNavArrowButton);
 
   //create container for projects section intro
   let projectsIntroSectionContainer = document.createElement("div");
   projectsIntroSectionContainer.classList.add("projectsIntroSectionContainer");
-
-  //create icon
-  // let projectsIcon = document.createElement("img");
-  // projectsIcon.setAttribute("src", "assets/svg/projects_variant.svg");
-  // projectsIcon.classList.add("contentIcon");
-  // projectsIntroSectionContainer.appendChild(projectsIcon);
 
   //create element for text blurb
   let projectText = document.createElement("p");
@@ -106,6 +109,7 @@ const showProjectsContent = (function(data) {
     projectLogo.classList.add("projectLogo");
     projectLogo.setAttribute("src", element.logo);
     projectLogo.setAttribute("name", element.title);
+    projectLogo.setAttribute("alt", element.logoAlt);
     projectsContent.appendChild(projectContainerEach);
     projectContainerEach.appendChild(projectLogo);
 
@@ -115,21 +119,25 @@ const showProjectsContent = (function(data) {
     projectContainerEach.appendChild(projectLinks);
 
     //repo and demo links
+    let repoLinkButton = document.createElement("button");
     let repoLink = document.createElement("a");
     repoLink.setAttribute("href", element.repoLink);
     repoLink.setAttribute("target", "_blank");
     let repoText = document.createTextNode("repo");
     repoLink.appendChild(repoText);
-    projectLinks.appendChild(repoLink);
+    repoLinkButton.appendChild(repoLink);
+    projectLinks.appendChild(repoLinkButton);
 
-    //check for demo link (not all projects live...)
+    //check for demo link (not all projects are live...)
     if (element.demoLink != null) {
+      let demoLinkButton = document.createElement("button");
       let demoLink = document.createElement("a");
       demoLink.setAttribute("href", element.demoLink);
       demoLink.setAttribute("target", "_blank");
       let demoText = document.createTextNode("demo");
       demoLink.appendChild(demoText);
-      projectLinks.appendChild(demoLink);
+      demoLinkButton.appendChild(demoLink);
+      projectLinks.appendChild(demoLinkButton);
     }
 
     //project preview image
@@ -138,6 +146,7 @@ const showProjectsContent = (function(data) {
     let projectPreview = document.createElement("img");
     projectPreview.classList.add("projectPreviewImg");
     projectPreview.setAttribute("src", element.screenCap);
+    projectPreview.setAttribute("alt", element.screenCapAlt);
     projectContainerEach.appendChild(projectPreview);
     projectContainerEach.appendChild(projectPreviewContainer);
 

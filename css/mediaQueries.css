@@ -236,7 +236,7 @@
   .projectLinks {
     justify-content: space-evenly;
   }
-  .projectLinks > a {
+  .projectLinks a {
     font-size: 1.5rem;
   }
   .projectPreviewImg {
@@ -247,9 +247,8 @@
     width: 75%;
   }
   /* contact section======================================================= */
-  .linkContainer > a {
+  .linkContainer a {
     font-size: 1.5rem;
-    width: 36%;
   }
   .contactContainer > p {
     font-size: 1.5rem;
@@ -317,9 +316,8 @@
   .projectLinks {
     justify-content: space-evenly;
   }
-  .projectLinks > a {
+  .projectLinks a {
     font-size: 2rem;
-    width: 15%;
   }
   .projectPreviewImg {
     height: 225px;
@@ -329,9 +327,8 @@
   }
 
   /* contact section======================================================= */
-  .linkContainer > a {
+  .linkContainer a {
     font-size: 2rem;
-    width: 36%;
   }
   .contactContainer > p {
     font-size: 2rem;
@@ -387,9 +384,8 @@
   .projectLogo {
     max-height: 4.5rem;
   }
-  .projectLinks > a {
+  .projectLinks a {
     font-size: 1.2rem;
-    width: 20%;
   }
   .projectPreviewImg {
     height: 180px;
@@ -400,9 +396,8 @@
     width: 80%;
   }
   /* contact section======================================================= */
-  .linkContainer > a {
+  .linkContainer a {
     font-size: 1.5rem;
-    width: 28%;
   }
   .contactContainer > p {
     font-size: 1.5rem;

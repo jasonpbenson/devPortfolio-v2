@@ -5,10 +5,8 @@ const contentModal = document.getElementById("contentModal");
 
 resetButton.addEventListener("click", e => {
   //hide modal container and content
-  setTimeout(function() {
-    contentModal.classList.add("displayNone");
-    aboutContent.setAttribute("id", "displayNone");
-    projectsContent.setAttribute("id", "displayNone");
-    contactContent.setAttribute("id", "displayNone");
-  }, 1000);
+  contentModal.classList.add("displayNone");
+  aboutContent.setAttribute("id", "displayNone");
+  projectsContent.setAttribute("id", "displayNone");
+  contactContent.setAttribute("id", "displayNone");
 });

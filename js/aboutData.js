@@ -63,11 +63,14 @@ const showAboutContent = (function(data) {
   aboutContent.appendChild(navSonar);
 
   //create nav button
-  let aboutNavButton = document.createElement("img");
-  aboutNavButton.setAttribute("src", "assets/svg/down-arrow_v2.svg");
-  aboutNavButton.setAttribute("id", "aboutNavArrow");
-  aboutNavButton.classList.add("navArrow");
-  aboutContent.appendChild(aboutNavButton);
+  let aboutNavArrowButton = document.createElement("button");
+  let aboutNavArrow = document.createElement("img");
+  aboutNavArrow.setAttribute("src", "assets/svg/down-arrow_v2.svg");
+  aboutNavArrow.setAttribute("id", "aboutNavArrow");
+  aboutNavArrow.setAttribute("alt", "navigation arrow graphic");
+  aboutNavArrow.classList.add("navArrow");
+  aboutNavArrowButton.appendChild(aboutNavArrow);
+  aboutContent.appendChild(aboutNavArrowButton);
 
   //create container for about section intro
   let aboutIntroSectionContainer = document.createElement("div");

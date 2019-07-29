@@ -213,7 +213,7 @@
   width: 100%;
 }
 
-.projectLinks > a {
+.projectLinks a {
   border: 1px solid var(--prpl);
   border-radius: 15px;
   color: var(--prpl);
@@ -223,7 +223,6 @@
   margin-top: 0.75rem;
   padding: 5px;
   text-align: center;
-  width: 25%;
 }
 
 .projectDescription {
@@ -274,21 +273,21 @@
   width: 100%;
 }
 
-.linkContainer > a {
+.linkContainer a {
   color: var(--prpl);
   border: 1px solid var(--prpl);
   border-radius: 15px;
   font-family: var(--paragraph-font);
-  font-size: 1rem;
-  margin: 0 6%;
-  padding: 4%;
-  width: fit-content;
+  font-size: 1.3rem;
+  margin: 0 auto;
+  padding: 8%;
+  width: 100%;
 }
 
 .contactContainer > p {
   color: var(--prpl);
   font-family: var(--paragraph-font);
-  font-size: 1rem;
+  font-size: 1.3rem;
   margin: 1% auto;
   text-align: center;
 }
